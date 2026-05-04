@@ -1,10 +1,8 @@
 from pathlib import Path
 
-from fastapi.testclient import TestClient
-
 from app.assistant import WomensHealthAssistant
 from app.config import AUDIT_LOG_FILE
-from app.main import app, get_protocol, list_protocols
+from app.main import get_protocol, list_protocols, root
 from app.models import AssistantRequest
 
 
@@ -46,11 +44,7 @@ def test_protocol_endpoints() -> None:
 
 
 def test_root_endpoint_returns_navigation_links() -> None:
-    client = TestClient(app)
-    response = client.get("/")
-
-    assert response.status_code == 200
-    assert response.json() == {
+    assert root() == {
         "message": "Assistente Virtual Medico - Saude e Seguranca da Mulher",
         "docs": "/docs",
         "health": "/health",

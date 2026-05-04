@@ -2,7 +2,7 @@
   {
     "case_id": "demo-clinico-01",
     "type": "pergunta_clinica",
-    "question": "Estou no pós-parto e sinto muita tristeza e dificuldade para dormir. Isso pode ser preocupante?",
+    "question": "Estou no pos-parto e sinto muita tristeza e dificuldade para dormir. Isso pode ser preocupante?",
     "context": {
       "postpartum_days": 21,
       "identified_name": "Paciente Exemplo"
@@ -12,8 +12,12 @@
     "case_id": "demo-gineco-01",
     "type": "triagem_ginecologica",
     "input": {
-      "sintomas": ["dor pélvica intensa", "febre", "corrimento com odor forte"],
-      "contexto": "Sintomas há 2 dias com piora progressiva",
+      "sintomas": [
+        "dor pelvica intensa",
+        "febre",
+        "corrimento com odor forte"
+      ],
+      "contexto": "Sintomas ha 2 dias com piora progressiva",
       "idade": 29,
       "gestante": false
     }
@@ -23,9 +27,15 @@
     "type": "fluxo_obstetrico",
     "input": {
       "idade_gestacional_semanas": 31,
-      "sintomas": ["cefaleia intensa", "visão embaçada", "inchaço súbito"],
-      "comorbidades": ["hipertensão gestacional prévia"],
-      "contexto": "Redução da movimentação fetal desde ontem"
+      "sintomas": [
+        "cefaleia intensa",
+        "visao emba\u00e7ada",
+        "inchaco subbito"
+      ],
+      "comorbidades": [
+        "hipertensao gestacional previa"
+      ],
+      "contexto": "Reducao da movimentacao fetal desde ontem"
     }
   },
   {
@@ -33,8 +43,12 @@
     "type": "fluxo_prevencao",
     "input": {
       "idade": 47,
-      "historico": ["mãe com câncer de mama após os 50 anos"],
-      "exames_realizados": ["Papanicolau há 4 anos"],
+      "historico": [
+        "mae com cancer de mama apos os 50 anos"
+      ],
+      "exames_realizados": [
+        "Papanicolau ha 4 anos"
+      ],
       "contexto": "Sem queixas atuais"
     }
   },
@@ -42,10 +56,13 @@
     "case_id": "demo-violencia-01",
     "type": "fluxo_violencia",
     "input": {
-      "sinais_alerta": ["medo do parceiro", "isolamento social", "lesões frequentes"],
+      "sinais_alerta": [
+        "medo do parceiro",
+        "isolamento social",
+        "lesoes frequentes"
+      ],
       "contexto": "Parceiro monitora o celular",
       "risco_imediato": true
     }
   }
 ]
-

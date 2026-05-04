@@ -1,0 +1,78 @@
+[
+  {
+    "doc_id": "menstrual-health-01",
+    "title": "Fluxo menstrual intenso",
+    "question": "Quando fluxo menstrual intenso pede avaliacao medica?",
+    "context": "Pergunta sintetica sobre saude menstrual.",
+    "answer": "Fluxo muito intenso com tontura, palidez, sangramento prolongado, dor incapacitante ou piora progressiva pede avaliacao presencial.",
+    "source": "guideline_simulada_saude_menstrual_v1",
+    "risk_level": "alto",
+    "category": "saude_menstrual",
+    "specialty": "ginecologia",
+    "keywords": [
+      "fluxo intenso",
+      "anemia",
+      "dor incapacitante"
+    ],
+    "representativity_tags": [
+      "adolescentes",
+      "atencao_primaria"
+    ]
+  },
+  {
+    "doc_id": "menstrual-health-02",
+    "title": "Atraso menstrual",
+    "question": "Como abordar atraso menstrual de forma segura?",
+    "context": "Pergunta sintetica para orientacao inicial sem diagnostico definitivo.",
+    "answer": "Atraso menstrual exige revisar possibilidade de gestacao, estresse, mudancas hormonais e sinais de alarme, mantendo avaliacao profissional se persistir ou vier com dor forte.",
+    "source": "guideline_simulada_saude_menstrual_v1",
+    "risk_level": "moderado",
+    "category": "saude_menstrual",
+    "specialty": "ginecologia",
+    "keywords": [
+      "atraso menstrual",
+      "gestacao",
+      "dor forte"
+    ],
+    "representativity_tags": [
+      "saude_publica"
+    ]
+  },
+  {
+    "doc_id": "menstrual-health-03",
+    "title": "Dismenorreia importante",
+    "question": "Colica incapacitante deve ser investigada?",
+    "context": "Pergunta sintetica sobre dor menstrual.",
+    "answer": "Dor que impede atividades, piora de forma progressiva, vem com desmaio ou sangramento importante deve ser investigada clinicamente.",
+    "source": "guideline_simulada_saude_menstrual_v1",
+    "risk_level": "alto",
+    "category": "saude_menstrual",
+    "specialty": "ginecologia",
+    "keywords": [
+      "colica",
+      "dismenorreia",
+      "desmaio"
+    ],
+    "representativity_tags": [
+      "adolescentes"
+    ]
+  },
+  {
+    "doc_id": "menstrual-health-04",
+    "title": "Registro do ciclo menstrual",
+    "question": "Por que registrar duracao e sintomas do ciclo?",
+    "context": "Pergunta sintetica educativa sobre autocuidado menstrual.",
+    "answer": "Registrar duracao, intervalo, intensidade do fluxo e sintomas ajuda a reconhecer padroes anormais e qualificar a conversa com profissional habilitado.",
+    "source": "guideline_simulada_saude_menstrual_v1",
+    "risk_level": "baixo",
+    "category": "saude_menstrual",
+    "specialty": "ginecologia",
+    "keywords": [
+      "registro do ciclo",
+      "autocuidado"
+    ],
+    "representativity_tags": [
+      "educacao_em_saude"
+    ]
+  }
+]

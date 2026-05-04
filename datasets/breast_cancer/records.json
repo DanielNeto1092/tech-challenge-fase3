@@ -1,0 +1,81 @@
+[
+  {
+    "doc_id": "rastreio-cancer-01",
+    "title": "Triagem de cancer de mama e colo do utero",
+    "question": "Como organizar rastreio de cancer de mama e colo do utero?",
+    "context": "Pergunta sintetica sobre rastreio e prevencao em saude publica.",
+    "answer": "A orientacao deve considerar faixa etaria, historico, resultados anteriores e necessidade de avaliacao presencial diante de nodulo palpavel, retracao cutanea ou sangramento pos-coito.",
+    "source": "protocolo_simulado_prevencao_rastreio_v2",
+    "risk_level": "moderado",
+    "category": "prevencao",
+    "specialty": "mastologia_preventiva",
+    "keywords": [
+      "mamografia",
+      "Papanicolau",
+      "nodulo",
+      "sangramento pos-coito"
+    ],
+    "representativity_tags": [
+      "saude_publica",
+      "atencao_primaria"
+    ]
+  },
+  {
+    "doc_id": "laudo-mamografia-01",
+    "title": "Laudo sintetico de mamografia com correlacao clinica",
+    "question": "Como interpretar laudo sintetico de mamografia de forma segura?",
+    "context": "Pergunta sintetica sobre laudos de imagem, sem substituir avaliacao especializada.",
+    "answer": "Laudos devem ser correlacionados com exame clinico, historico pessoal e familiar; achados suspeitos ou discordancia clinica exigem avaliacao presencial especializada.",
+    "source": "colecao_simulada_laudos_imagem_v1",
+    "risk_level": "alto",
+    "category": "documentos_especializados",
+    "specialty": "mastologia",
+    "keywords": [
+      "mamografia",
+      "laudo",
+      "correlacao clinica",
+      "nodulo"
+    ],
+    "representativity_tags": [
+      "equidade_acesso",
+      "rastreio_populacional"
+    ]
+  },
+  {
+    "doc_id": "breast-cancer-qa-03",
+    "title": "Nodulo mamario palpavel",
+    "question": "Nodulo mamario palpavel precisa de revisao rapida?",
+    "context": "Pergunta sintetica sobre sinais de alarme mamarios.",
+    "answer": "Nodulo palpavel, retracao cutanea, descarga sanguinolenta ou mudanca rapida da mama justificam avaliacao presencial prioritaria.",
+    "source": "guideline_simulada_mastologia_v1",
+    "risk_level": "alto",
+    "category": "breast_cancer",
+    "specialty": "mastologia",
+    "keywords": [
+      "nodulo",
+      "retracao",
+      "descarga sanguinolenta"
+    ],
+    "representativity_tags": [
+      "atencao_secundaria"
+    ]
+  },
+  {
+    "doc_id": "breast-cancer-qa-04",
+    "title": "Historico familiar e rastreio",
+    "question": "Historico familiar muda a organizacao do rastreio?",
+    "context": "Pergunta sintetica sobre prevencao personalizada.",
+    "answer": "Historico familiar pode antecipar necessidade de avaliacao individualizada e revisao profissional do plano de rastreio, sempre conforme diretrizes locais.",
+    "source": "guideline_simulada_mastologia_v1",
+    "risk_level": "moderado",
+    "category": "breast_cancer",
+    "specialty": "mastologia_preventiva",
+    "keywords": [
+      "historico familiar",
+      "rastreamento"
+    ],
+    "representativity_tags": [
+      "equidade_acesso"
+    ]
+  }
+]

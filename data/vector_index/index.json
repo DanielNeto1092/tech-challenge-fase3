@@ -1,0 +1,706 @@
+{
+  "documents": [
+    {
+      "doc_id": "womens-health-qa-01",
+      "title": "Dor pelvica e avaliacao inicial",
+      "category": "womens_health_qa",
+      "content": "Pessoa adulta com dor pelvica de inicio recente e sem uso de dados reais. Dor pelvica com febre, desmaio, rigidez abdominal, sangramento importante ou piora rapida exige avaliacao presencial prioritaria. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_saude_mulher_v1",
+      "specialty": "saude_da_mulher",
+      "document_type": "faq",
+      "keywords": [
+        "dor pelvica",
+        "febre",
+        "sangramento",
+        "desmaio"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "atencao_primaria",
+        "periferia_urbana"
+      ]
+    },
+    {
+      "doc_id": "womens-health-qa-02",
+      "title": "Leucorreia sem sinais sistemicos",
+      "category": "womens_health_qa",
+      "content": "Relato sintetico de corrimento leve sem febre e sem dor intensa. Sem sinais sistemicos, a orientacao segura e organizar consulta programada, reforcando retorno rapido se surgirem dor intensa, odor forte persistente ou febre. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_saude_mulher_v1",
+      "specialty": "ginecologia",
+      "document_type": "faq",
+      "keywords": [
+        "corrimento",
+        "odor forte",
+        "febre"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::moderate"
+      ],
+      "representativity_tags": [
+        "atencao_secundaria"
+      ]
+    },
+    {
+      "doc_id": "womens-health-qa-03",
+      "title": "Planejamento de consulta ginecologica",
+      "category": "womens_health_qa",
+      "content": "Pergunta sintetica sobre prevencao em saude da mulher. A consulta preventiva deve revisar historico menstrual, vida sexual, exames em atraso, vacinacao, fatores de risco e sinais de alarme que justifiquem avaliacao presencial antecipada. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_saude_mulher_v1",
+      "specialty": "saude_da_mulher",
+      "document_type": "faq",
+      "keywords": [
+        "prevencao",
+        "consulta",
+        "vacinacao"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::low"
+      ],
+      "representativity_tags": [
+        "saude_publica"
+      ]
+    },
+    {
+      "doc_id": "womens-health-qa-04",
+      "title": "Pos-parto e sinais de alerta",
+      "category": "womens_health_qa",
+      "content": "Pergunta sintetica sobre seguimento pos-parto. Sangramento excessivo, febre, dor mamaria intensa, tristeza persistente, falta de ar e dor abdominal forte merecem avaliacao clinica rapida. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_saude_mulher_v1",
+      "specialty": "obstetricia",
+      "document_type": "faq",
+      "keywords": [
+        "pos-parto",
+        "sangramento",
+        "febre",
+        "falta de ar"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "pos_parto",
+        "prenatal_sus"
+      ]
+    },
+    {
+      "doc_id": "gineco-sintomas-01",
+      "title": "Corrimento, prurido e dor pelvica",
+      "category": "sintomas_ginecologicos",
+      "content": "Condicao: Corrimento com prurido e dor pelvica. Sintomas principais: Corrimento, Prurido, Dor pelvica, Odor forte. Classificacao de risco: alto. Acoes recomendadas: Avaliar sinais sistemicos; Priorizar exame ginecologico presencial; Orientar retorno imediato se houver febre ou sangramento. Encaminhamento obrigatorio: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "linha_cuidado_ginecologico_simulada_v2",
+      "specialty": "ginecologia",
+      "document_type": "protocolo",
+      "keywords": [
+        "corrimento",
+        "prurido",
+        "dor pelvica",
+        "febre"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "requires_professional_referral",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "atencao_secundaria",
+        "periferia_urbana"
+      ]
+    },
+    {
+      "doc_id": "ultrassom-pelvico-01",
+      "title": "Revisao de ultrassom pelvico sintetico",
+      "category": "documentos_especializados",
+      "content": "Condicao: Achado em ultrassom pelvico com sintoma associado. Sintomas principais: Massa anexial, Sangramento anormal, Dor intensa. Classificacao de risco: alto. Acoes recomendadas: Correlacionar laudo com exame clinico; Encaminhar para ginecologia; Avaliar urgencia conforme intensidade da dor. Encaminhamento obrigatorio: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "colecao_simulada_laudos_pelvicos_v1",
+      "specialty": "ginecologia",
+      "document_type": "protocolo",
+      "keywords": [
+        "ultrassom",
+        "massa anexial",
+        "sangramento"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "requires_professional_referral",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "imagem_diagnostica"
+      ]
+    },
+    {
+      "doc_id": "gineco-menopausa-01",
+      "title": "Sangramento apos menopausa",
+      "category": "menopausa",
+      "content": "Condicao: Sangramento apos menopausa. Sintomas principais: Sangramento uterino, Menopausa, Dor pelvica. Classificacao de risco: alto. Acoes recomendadas: Encaminhar para avaliacao ginecologica; Revisar historico e tempo de menopausa; Nao atrasar investigacao presencial. Encaminhamento obrigatorio: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "manual_simulado_saude_mulher_adulta_v1",
+      "specialty": "ginecologia",
+      "document_type": "protocolo",
+      "keywords": [
+        "menopausa",
+        "sangramento"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "requires_professional_referral",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "meia_idade"
+      ]
+    },
+    {
+      "doc_id": "gineco-rastreio-ectopia-01",
+      "title": "Sangramento pos-coito",
+      "category": "sintomas_ginecologicos",
+      "content": "Condicao: Sangramento apos relacao sexual. Sintomas principais: Sangramento pos-coito, Corrimento, Dor na relacao sexual. Classificacao de risco: moderado. Acoes recomendadas: Organizar consulta com exame especular; Revisar preventivos em atraso; Acelerar avaliacao se houver dor intensa ou sangramento persistente. Encaminhamento obrigatorio: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "protocolo_simulado_ginecologia_ambulatorial_v1",
+      "specialty": "ginecologia",
+      "document_type": "protocolo",
+      "keywords": [
+        "sangramento pos-coito",
+        "preventivo"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "requires_professional_referral",
+        "risk::moderate"
+      ],
+      "representativity_tags": [
+        "atencao_primaria"
+      ]
+    },
+    {
+      "doc_id": "gestacao-alerta-01",
+      "title": "Sinais de alerta na gravidez e pos-parto",
+      "category": "obstetricia",
+      "content": "Condicao: Sinais de alerta na gestacao e no pos-parto. Sintomas principais: Sangramento vaginal, Cefaleia intensa, Falta de ar, Convulsoes. Classificacao de risco: critico. Acoes recomendadas: Encaminhar para atendimento imediato; Priorizar seguranca materno-fetal; Orientar servico de urgencia sem atraso. Encaminhamento obrigatorio: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "protocolo_obstetrico_simulado_v3",
+      "specialty": "obstetricia",
+      "document_type": "protocolo",
+      "keywords": [
+        "gravidez",
+        "pos-parto",
+        "cefaleia intensa",
+        "sangramento"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "requires_professional_referral",
+        "risk::critical"
+      ],
+      "representativity_tags": [
+        "alto_risco",
+        "prenatal_sus",
+        "zona_rural"
+      ]
+    },
+    {
+      "doc_id": "obstetrico-hipertensao-01",
+      "title": "Suspeita de sindrome hipertensiva na gestacao",
+      "category": "obstetricia",
+      "content": "Condicao: Gestante com cefaleia intensa e alteracao visual. Sintomas principais: Cefaleia intensa, Visao embacada, Edema subbito. Classificacao de risco: alto. Acoes recomendadas: Avaliar presencialmente no mesmo dia; Verificar sinais de gravidade; Encaminhar para obstetricia se persistirem sintomas. Encaminhamento obrigatorio: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_risco_gestacional_v1",
+      "specialty": "obstetricia",
+      "document_type": "protocolo",
+      "keywords": [
+        "cefaleia",
+        "visao turva",
+        "edema"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "requires_professional_referral",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "alto_risco"
+      ]
+    },
+    {
+      "doc_id": "obstetrico-pre-natal-01",
+      "title": "Organizacao do pre-natal de rotina",
+      "category": "obstetricia",
+      "content": "Condicao: Gestacao sem sinais de alarme. Sintomas principais: Consulta de rotina, Seguimento gestacional. Classificacao de risco: baixo. Acoes recomendadas: Manter consultas programadas; Revisar exames do trimestre; Reforcar educacao sobre sinais de alarme. Encaminhamento obrigatorio: nao. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_pre_natal_v1",
+      "specialty": "obstetricia",
+      "document_type": "protocolo",
+      "keywords": [
+        "pre-natal",
+        "rotina",
+        "exames"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::low"
+      ],
+      "representativity_tags": [
+        "atencao_primaria"
+      ]
+    },
+    {
+      "doc_id": "obstetrico-amamentacao-01",
+      "title": "Dor mamaria e dificuldade de pega",
+      "category": "amamentacao",
+      "content": "Condicao: Dificuldade na amamentacao com dor mamaria. Sintomas principais: Dor mamaria, Fissura, Dificuldade de pega, Febre. Classificacao de risco: moderado. Acoes recomendadas: Avaliar tecnica de amamentacao; Encaminhar para enfermagem ou banco de leite se persistir; Priorizar avaliacao rapida se houver febre. Encaminhamento obrigatorio: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guia_simulado_aleitamento_materno_v1",
+      "specialty": "obstetricia",
+      "document_type": "protocolo",
+      "keywords": [
+        "amamentacao",
+        "fissura",
+        "mastite"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "requires_professional_referral",
+        "risk::moderate"
+      ],
+      "representativity_tags": [
+        "pos_parto",
+        "atencao_primaria"
+      ]
+    },
+    {
+      "doc_id": "violencia-domestica-01",
+      "title": "Medo do parceiro e controle coercitivo",
+      "category": "violencia_domestica",
+      "content": "Relato sintetico: Pessoa relata medo do parceiro, controle do celular e isolamento social progressivo.. Score de risco: 0.94. Nivel: alto. Requer intervencao: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "protocolo_simulado_protecao_mulher_v3",
+      "specialty": "protecao_social",
+      "document_type": "protocolo_seguran\u00e7a",
+      "keywords": [
+        "medo do parceiro",
+        "isolamento",
+        "controle do celular"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "requires_professional_referral",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "violencia_genero",
+        "rede_protecao"
+      ]
+    },
+    {
+      "doc_id": "violencia-domestica-02",
+      "title": "Lesoes repetidas e explicacoes inconsistentes",
+      "category": "violencia_domestica",
+      "content": "Relato sintetico: Relato sintetico de lesoes frequentes com justificativas inconsistentes e ansiedade intensa na consulta.. Score de risco: 0.88. Nivel: alto. Requer intervencao: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "protocolo_simulado_protecao_mulher_v3",
+      "specialty": "protecao_social",
+      "document_type": "protocolo_seguran\u00e7a",
+      "keywords": [
+        "lesoes frequentes",
+        "ansiedade",
+        "inconsistencia"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "requires_professional_referral",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "violencia_genero",
+        "assistencia_social"
+      ]
+    },
+    {
+      "doc_id": "violencia-domestica-03",
+      "title": "Conflito verbal sem sinal claro de coercao",
+      "category": "violencia_domestica",
+      "content": "Relato sintetico: Pessoa descreve conflito verbal com parceiro, sem relatar ameacas, lesoes ou vigilancia constante.. Score de risco: 0.32. Nivel: moderado. Requer intervencao: nao. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "protocolo_simulado_protecao_mulher_v3",
+      "specialty": "protecao_social",
+      "document_type": "protocolo_seguran\u00e7a",
+      "keywords": [
+        "conflito verbal",
+        "vigilancia"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::moderate"
+      ],
+      "representativity_tags": [
+        "acolhimento"
+      ]
+    },
+    {
+      "doc_id": "violencia-domestica-04",
+      "title": "Coercao sexual e ameaca direta",
+      "category": "violencia_domestica",
+      "content": "Relato sintetico: Relato sintetico de coercao sexual, ameacas e restricao de acesso a dinheiro e transporte.. Score de risco: 0.97. Nivel: alto. Requer intervencao: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "protocolo_simulado_protecao_mulher_v3",
+      "specialty": "protecao_social",
+      "document_type": "protocolo_seguran\u00e7a",
+      "keywords": [
+        "coercao sexual",
+        "ameacas",
+        "controle financeiro"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "requires_professional_referral",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "violencia_genero",
+        "rede_protecao"
+      ]
+    },
+    {
+      "doc_id": "faq-contraceptivos-01",
+      "title": "Contraceptivos hormonais combinados",
+      "category": "contraceptivos",
+      "content": "Pergunta sintetica para apoio educativo em planejamento reprodutivo. Deve-se revisar risco cardiovascular, tabagismo, enxaqueca com aura, historico trombotico e necessidade de avaliacao presencial antes de iniciar ou trocar metodo. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "protocolo_simulado_planejamento_reprodutivo_v1",
+      "specialty": "planejamento_familiar",
+      "document_type": "faq",
+      "keywords": [
+        "contraceptivo",
+        "hormonal",
+        "trombose",
+        "tabagismo"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::moderate"
+      ],
+      "representativity_tags": [
+        "adolescentes",
+        "baixa_renda"
+      ]
+    },
+    {
+      "doc_id": "faq-contraceptivos-02",
+      "title": "Metodo de longa duracao",
+      "category": "contraceptivos",
+      "content": "Pergunta sintetica sem dados reais para educacao em saude. Metodos de longa duracao podem ser discutidos quando ha interesse em alta eficacia, dificuldade com uso diario ou necessidade de planejamento reprodutivo continuado. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "protocolo_simulado_planejamento_reprodutivo_v1",
+      "specialty": "planejamento_familiar",
+      "document_type": "faq",
+      "keywords": [
+        "longo prazo",
+        "diu",
+        "implante"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::low"
+      ],
+      "representativity_tags": [
+        "atencao_primaria"
+      ]
+    },
+    {
+      "doc_id": "faq-contraceptivos-03",
+      "title": "Pos-parto e escolha do metodo",
+      "category": "contraceptivos",
+      "content": "Pergunta sintetica sobre cuidado pos-parto. A orientacao deve considerar amamentacao, risco trombotico, preferencia da pessoa e necessidade de revisao presencial antes de definir metodo individual. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "protocolo_simulado_planejamento_reprodutivo_v1",
+      "specialty": "planejamento_familiar",
+      "document_type": "faq",
+      "keywords": [
+        "pos-parto",
+        "amamentacao",
+        "metodo"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::moderate"
+      ],
+      "representativity_tags": [
+        "pos_parto"
+      ]
+    },
+    {
+      "doc_id": "faq-contraceptivos-04",
+      "title": "Sinais para revisao do metodo",
+      "category": "contraceptivos",
+      "content": "Pergunta sintetica sobre seguimento em contracepcao. Dor toracica, falta de ar, cefaleia intensa, sangramento importante ou desconforto persistente exigem avaliacao profissional e nao devem ser manejados como ajuste autonomo. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "protocolo_simulado_planejamento_reprodutivo_v1",
+      "specialty": "planejamento_familiar",
+      "document_type": "faq",
+      "keywords": [
+        "cefaleia intensa",
+        "falta de ar",
+        "sangramento"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "seguranca_medicamentosa"
+      ]
+    },
+    {
+      "doc_id": "rastreio-cancer-01",
+      "title": "Triagem de cancer de mama e colo do utero",
+      "category": "prevencao",
+      "content": "Pergunta sintetica sobre rastreio e prevencao em saude publica. A orientacao deve considerar faixa etaria, historico, resultados anteriores e necessidade de avaliacao presencial diante de nodulo palpavel, retracao cutanea ou sangramento pos-coito. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "protocolo_simulado_prevencao_rastreio_v2",
+      "specialty": "mastologia_preventiva",
+      "document_type": "protocolo",
+      "keywords": [
+        "mamografia",
+        "Papanicolau",
+        "nodulo",
+        "sangramento pos-coito"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::moderate"
+      ],
+      "representativity_tags": [
+        "saude_publica",
+        "atencao_primaria"
+      ]
+    },
+    {
+      "doc_id": "laudo-mamografia-01",
+      "title": "Laudo sintetico de mamografia com correlacao clinica",
+      "category": "documentos_especializados",
+      "content": "Pergunta sintetica sobre laudos de imagem, sem substituir avaliacao especializada. Laudos devem ser correlacionados com exame clinico, historico pessoal e familiar; achados suspeitos ou discordancia clinica exigem avaliacao presencial especializada. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "colecao_simulada_laudos_imagem_v1",
+      "specialty": "mastologia",
+      "document_type": "protocolo",
+      "keywords": [
+        "mamografia",
+        "laudo",
+        "correlacao clinica",
+        "nodulo"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "equidade_acesso",
+        "rastreio_populacional"
+      ]
+    },
+    {
+      "doc_id": "breast-cancer-qa-03",
+      "title": "Nodulo mamario palpavel",
+      "category": "breast_cancer",
+      "content": "Pergunta sintetica sobre sinais de alarme mamarios. Nodulo palpavel, retracao cutanea, descarga sanguinolenta ou mudanca rapida da mama justificam avaliacao presencial prioritaria. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_mastologia_v1",
+      "specialty": "mastologia",
+      "document_type": "protocolo",
+      "keywords": [
+        "nodulo",
+        "retracao",
+        "descarga sanguinolenta"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "atencao_secundaria"
+      ]
+    },
+    {
+      "doc_id": "breast-cancer-qa-04",
+      "title": "Historico familiar e rastreio",
+      "category": "breast_cancer",
+      "content": "Pergunta sintetica sobre prevencao personalizada. Historico familiar pode antecipar necessidade de avaliacao individualizada e revisao profissional do plano de rastreio, sempre conforme diretrizes locais. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_mastologia_v1",
+      "specialty": "mastologia_preventiva",
+      "document_type": "protocolo",
+      "keywords": [
+        "historico familiar",
+        "rastreamento"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::moderate"
+      ],
+      "representativity_tags": [
+        "equidade_acesso"
+      ]
+    },
+    {
+      "doc_id": "menstrual-health-01",
+      "title": "Fluxo menstrual intenso",
+      "category": "saude_menstrual",
+      "content": "Pergunta sintetica sobre saude menstrual. Fluxo muito intenso com tontura, palidez, sangramento prolongado, dor incapacitante ou piora progressiva pede avaliacao presencial. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_saude_menstrual_v1",
+      "specialty": "ginecologia",
+      "document_type": "faq",
+      "keywords": [
+        "fluxo intenso",
+        "anemia",
+        "dor incapacitante"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "adolescentes",
+        "atencao_primaria"
+      ]
+    },
+    {
+      "doc_id": "menstrual-health-02",
+      "title": "Atraso menstrual",
+      "category": "saude_menstrual",
+      "content": "Pergunta sintetica para orientacao inicial sem diagnostico definitivo. Atraso menstrual exige revisar possibilidade de gestacao, estresse, mudancas hormonais e sinais de alarme, mantendo avaliacao profissional se persistir ou vier com dor forte. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_saude_menstrual_v1",
+      "specialty": "ginecologia",
+      "document_type": "faq",
+      "keywords": [
+        "atraso menstrual",
+        "gestacao",
+        "dor forte"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::moderate"
+      ],
+      "representativity_tags": [
+        "saude_publica"
+      ]
+    },
+    {
+      "doc_id": "menstrual-health-03",
+      "title": "Dismenorreia importante",
+      "category": "saude_menstrual",
+      "content": "Pergunta sintetica sobre dor menstrual. Dor que impede atividades, piora de forma progressiva, vem com desmaio ou sangramento importante deve ser investigada clinicamente. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_saude_menstrual_v1",
+      "specialty": "ginecologia",
+      "document_type": "faq",
+      "keywords": [
+        "colica",
+        "dismenorreia",
+        "desmaio"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "adolescentes"
+      ]
+    },
+    {
+      "doc_id": "menstrual-health-04",
+      "title": "Registro do ciclo menstrual",
+      "category": "saude_menstrual",
+      "content": "Pergunta sintetica educativa sobre autocuidado menstrual. Registrar duracao, intervalo, intensidade do fluxo e sintomas ajuda a reconhecer padroes anormais e qualificar a conversa com profissional habilitado. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "guideline_simulada_saude_menstrual_v1",
+      "specialty": "ginecologia",
+      "document_type": "faq",
+      "keywords": [
+        "registro do ciclo",
+        "autocuidado"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::low"
+      ],
+      "representativity_tags": [
+        "educacao_em_saude"
+      ]
+    },
+    {
+      "doc_id": "saude-mental-01",
+      "title": "Saude mental materna no pos-parto",
+      "category": "saude_mental",
+      "content": "Pergunta sintetica sobre saude mental materna. Tristeza persistente, desesperanca, insone relevante, culpa intensa ou dificuldade de vinculo merecem acolhimento e avaliacao profissional; autoagressao e urgencia. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "fluxo_simulado_saude_mental_materna_v1",
+      "specialty": "saude_mental",
+      "document_type": "protocolo",
+      "keywords": [
+        "pos-parto",
+        "tristeza persistente",
+        "autoagressao"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "psicologia",
+        "psiquiatria",
+        "pos_parto"
+      ]
+    },
+    {
+      "doc_id": "maternal-mental-health-02",
+      "title": "Ansiedade no puerperio",
+      "category": "saude_mental",
+      "content": "Pergunta sintetica sobre sofrimento psiquico no puerperio. Ansiedade intensa com insone, exaustao, culpa, ataques de panico ou prejuizo funcional deve ser triada e encaminhada para avaliacao clinica e psicossocial. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "fluxo_simulado_saude_mental_materna_v1",
+      "specialty": "saude_mental",
+      "document_type": "protocolo",
+      "keywords": [
+        "ansiedade",
+        "puerperio",
+        "panico"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::moderate"
+      ],
+      "representativity_tags": [
+        "pos_parto"
+      ]
+    },
+    {
+      "doc_id": "maternal-mental-health-03",
+      "title": "Dificuldade de vinculo com o bebe",
+      "category": "saude_mental",
+      "content": "Pergunta sintetica sobre alerta psicossocial no pos-parto. Dificuldade de vinculo, apatia, evitacao do cuidado e desesperanca sao sinais relevantes e devem ser avaliados por equipe multiprofissional. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "fluxo_simulado_saude_mental_materna_v1",
+      "specialty": "saude_mental",
+      "document_type": "protocolo",
+      "keywords": [
+        "vinculo",
+        "apatia",
+        "desesperanca"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::moderate"
+      ],
+      "representativity_tags": [
+        "assistencia_social",
+        "psicologia"
+      ]
+    },
+    {
+      "doc_id": "maternal-mental-health-04",
+      "title": "Ideias de ferir a si ou ao bebe",
+      "category": "saude_mental",
+      "content": "Pergunta sintetica sobre seguranca psiquiatrica. Sim. ideias de autoagressao ou de ferir o bebe configuram urgencia psiquiatrica e exigem avaliacao imediata e rede de apoio. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+      "source": "fluxo_simulado_saude_mental_materna_v1",
+      "specialty": "saude_mental",
+      "document_type": "protocolo",
+      "keywords": [
+        "autoagressao",
+        "ferir o bebe",
+        "urgencia psiquiatrica"
+      ],
+      "safety_tags": [
+        "no_prescription",
+        "risk::high"
+      ],
+      "representativity_tags": [
+        "psiquiatria",
+        "pos_parto"
+      ]
+    }
+  ],
+  "engine": "faiss"
+}

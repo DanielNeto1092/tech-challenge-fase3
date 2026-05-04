@@ -78,6 +78,7 @@ def markdown_to_docx() -> None:
 
     lines = SOURCE_MD.read_text(encoding="utf-8").splitlines()
     in_code_block = False
+    code_block_language = ""
     code_lines: list[str] = []
 
     for raw_line in lines:
@@ -85,11 +86,14 @@ def markdown_to_docx() -> None:
 
         if line.startswith("```"):
             if in_code_block:
-                add_code_block(document, code_lines)
+                if code_block_language != "mermaid":
+                    add_code_block(document, code_lines)
                 code_lines = []
                 in_code_block = False
+                code_block_language = ""
             else:
                 in_code_block = True
+                code_block_language = line.removeprefix("```").strip().lower()
             continue
 
         if in_code_block:

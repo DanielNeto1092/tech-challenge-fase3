@@ -6,6 +6,7 @@ from app.domain.models import FlowResult, ObstetricInput
 from app.graphs.state import FlowState
 from app.security.audit import AuditLogger
 from app.security.risk import classify_risk
+from app.services.protocol_context_service import ProtocolContextService
 
 
 def _evaluate_gestational_risk(state: FlowState) -> FlowState:
@@ -14,7 +15,17 @@ def _evaluate_gestational_risk(state: FlowState) -> FlowState:
     if payload.idade_gestacional_semanas >= 28:
         texts.append("terceiro trimestre")
     risk = classify_risk(texts)
-    return {**state, "risk_level": risk}
+    service = ProtocolContextService.build()
+    protocols = service.find_relevant(
+        " ".join(texts),
+        specialties={"obstetricia", "saude_da_mulher"},
+        categories={"obstetricia", "amamentacao", "womens_health_qa"},
+    )
+    return {
+        **state,
+        "risk_level": risk,
+        "protocol_contexts": service.summarize_sources(protocols),
+    }
 
 
 def _recommend_orientation(state: FlowState) -> FlowState:
@@ -38,6 +49,8 @@ def _recommend_exams(state: FlowState) -> FlowState:
     exams = ["aferição de pressão arterial", "avaliação obstétrica presencial"]
     if state["urgency"] in {"urgent", "emergency"}:
         exams.extend(["cardiotocografia ou avaliação de vitalidade fetal", "proteinúria conforme protocolo local"])
+    if state.get("protocol_contexts"):
+        exams.append("conferir alinhamento com diretriz obstétrica sintética recuperada")
     return {**state, "suggested_exams": exams}
 
 
@@ -51,7 +64,7 @@ def _finalize(state: FlowState) -> FlowState:
             if urgent
             else "Agendar retorno obstétrico prioritário."
         ),
-        "notes": ["O assistente não substitui pré-natal nem avaliação de urgência."],
+        "notes": ["O assistente não substitui pré-natal nem avaliação de urgência."] + state.get("protocol_contexts", []),
     }
 
 

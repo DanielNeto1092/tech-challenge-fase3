@@ -1,0 +1,115 @@
+[
+  {
+    "doc_id": "gineco-sintomas-01",
+    "title": "Corrimento, prurido e dor pelvica",
+    "condition": "Corrimento com prurido e dor pelvica",
+    "symptoms": [
+      "corrimento",
+      "prurido",
+      "dor pelvica",
+      "odor forte"
+    ],
+    "risk_classification": "alto",
+    "recommended_actions": [
+      "avaliar sinais sistemicos",
+      "priorizar exame ginecologico presencial",
+      "orientar retorno imediato se houver febre ou sangramento"
+    ],
+    "requires_referral": true,
+    "source": "linha_cuidado_ginecologico_simulada_v2",
+    "category": "sintomas_ginecologicos",
+    "specialty": "ginecologia",
+    "keywords": [
+      "corrimento",
+      "prurido",
+      "dor pelvica",
+      "febre"
+    ],
+    "representativity_tags": [
+      "atencao_secundaria",
+      "periferia_urbana"
+    ]
+  },
+  {
+    "doc_id": "ultrassom-pelvico-01",
+    "title": "Revisao de ultrassom pelvico sintetico",
+    "condition": "Achado em ultrassom pelvico com sintoma associado",
+    "symptoms": [
+      "massa anexial",
+      "sangramento anormal",
+      "dor intensa"
+    ],
+    "risk_classification": "alto",
+    "recommended_actions": [
+      "correlacionar laudo com exame clinico",
+      "encaminhar para ginecologia",
+      "avaliar urgencia conforme intensidade da dor"
+    ],
+    "requires_referral": true,
+    "source": "colecao_simulada_laudos_pelvicos_v1",
+    "category": "documentos_especializados",
+    "specialty": "ginecologia",
+    "keywords": [
+      "ultrassom",
+      "massa anexial",
+      "sangramento"
+    ],
+    "representativity_tags": [
+      "imagem_diagnostica"
+    ]
+  },
+  {
+    "doc_id": "gineco-menopausa-01",
+    "title": "Sangramento apos menopausa",
+    "condition": "Sangramento apos menopausa",
+    "symptoms": [
+      "sangramento uterino",
+      "menopausa",
+      "dor pelvica"
+    ],
+    "risk_classification": "alto",
+    "recommended_actions": [
+      "encaminhar para avaliacao ginecologica",
+      "revisar historico e tempo de menopausa",
+      "nao atrasar investigacao presencial"
+    ],
+    "requires_referral": true,
+    "source": "manual_simulado_saude_mulher_adulta_v1",
+    "category": "menopausa",
+    "specialty": "ginecologia",
+    "keywords": [
+      "menopausa",
+      "sangramento"
+    ],
+    "representativity_tags": [
+      "meia_idade"
+    ]
+  },
+  {
+    "doc_id": "gineco-rastreio-ectopia-01",
+    "title": "Sangramento pos-coito",
+    "condition": "Sangramento apos relacao sexual",
+    "symptoms": [
+      "sangramento pos-coito",
+      "corrimento",
+      "dor na relacao sexual"
+    ],
+    "risk_classification": "moderado",
+    "recommended_actions": [
+      "organizar consulta com exame especular",
+      "revisar preventivos em atraso",
+      "acelerar avaliacao se houver dor intensa ou sangramento persistente"
+    ],
+    "requires_referral": true,
+    "source": "protocolo_simulado_ginecologia_ambulatorial_v1",
+    "category": "sintomas_ginecologicos",
+    "specialty": "ginecologia",
+    "keywords": [
+      "sangramento pos-coito",
+      "preventivo"
+    ],
+    "representativity_tags": [
+      "atencao_primaria"
+    ]
+  }
+]

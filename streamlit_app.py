@@ -431,7 +431,7 @@ def prevention_tab() -> None:
 
 
 def protocols_tab() -> None:
-    st.subheader("Protocolos e base sintética")
+    st.subheader("Protocolos e datasets sintéticos")
     category = st.selectbox(
         "Filtrar por categoria",
         ["todas"] + sorted({doc.category for doc in protocol_repository.documents}),

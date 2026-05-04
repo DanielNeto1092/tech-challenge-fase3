@@ -18,6 +18,7 @@ def load_cases() -> list[dict]:
 
 def run_demo() -> None:
     assistant = WomensHealthAssistant()
+    print("Datasets sintéticos especializados: womens_health_qa, gynecological_protocols, obstetric_guidelines, violence_detection, contraceptive, breast_cancer, menstrual_health, maternal_mental_health")
     for case in load_cases():
         print(f"\n=== {case['case_id']} | {case['type']} ===")
         if case["type"] == "pergunta_clinica":

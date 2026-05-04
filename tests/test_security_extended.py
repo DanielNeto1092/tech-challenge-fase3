@@ -2,8 +2,8 @@ import json
 from pathlib import Path
 
 from app.assistant import WomensHealthAssistant
-from app.config import ACCESS_LOG_FILE
-from app.main import specialty_access_report
+from app.config import ACCESS_LOG_FILE, AUDIT_LOG_FILE
+from app.main import reset_runtime_logs, specialty_access_report
 from app.models import AssistantRequest
 from app.security.crypto import encrypt_text
 from app.security.identity import IdentityVerifier
@@ -55,3 +55,15 @@ def test_access_log_written() -> None:
     lines_after = Path(ACCESS_LOG_FILE).read_text(encoding="utf-8").splitlines()
     assert len(lines_after) >= len(lines_before)
     json.loads(lines_after[-1])
+
+
+def test_reset_runtime_logs_clears_access_and_audit_files() -> None:
+    Path(ACCESS_LOG_FILE).write_text('{"evento":"acesso"}\n', encoding="utf-8")
+    Path(AUDIT_LOG_FILE).write_text('{"evento":"auditoria"}\n', encoding="utf-8")
+
+    reset_runtime_logs()
+
+    assert Path(ACCESS_LOG_FILE).exists()
+    assert Path(AUDIT_LOG_FILE).exists()
+    assert Path(ACCESS_LOG_FILE).read_text(encoding="utf-8") == ""
+    assert Path(AUDIT_LOG_FILE).read_text(encoding="utf-8") == ""

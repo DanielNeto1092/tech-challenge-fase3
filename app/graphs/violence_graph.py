@@ -6,6 +6,7 @@ from app.domain.models import FlowResult, ViolenceInput
 from app.graphs.state import FlowState
 from app.security.audit import AuditLogger
 from app.security.risk import classify_risk
+from app.services.protocol_context_service import ProtocolContextService
 
 
 def _evaluate_risk(state: FlowState) -> FlowState:
@@ -14,7 +15,17 @@ def _evaluate_risk(state: FlowState) -> FlowState:
     if payload.risco_imediato:
         texts.append("risco imediato")
     risk = classify_risk(texts)
-    return {**state, "risk_level": risk}
+    service = ProtocolContextService.build()
+    protocols = service.find_relevant(
+        " ".join(texts),
+        specialties={"protecao_social"},
+        categories={"violencia_domestica"},
+    )
+    return {
+        **state,
+        "risk_level": risk,
+        "protocol_contexts": service.summarize_sources(protocols),
+    }
 
 
 def _build_safety_protocol(state: FlowState) -> FlowState:
@@ -30,7 +41,7 @@ def _build_safety_protocol(state: FlowState) -> FlowState:
         "notes": [
             "Manter confidencialidade e acesso mínimo aos dados.",
             "Nunca minimizar suspeita de violência doméstica.",
-        ],
+        ] + state.get("protocol_contexts", []),
     }
 
 

@@ -1,17 +1,17 @@
 # Assistente Virtual Médico - Saúde e Segurança da Mulher
 
-Projeto acadêmico para o Tech Challenge Fase 3. O sistema simula um assistente virtual de apoio clínico especializado em saúde feminina, com foco em segurança da paciente, privacidade, LGPD, explainability e fluxos automatizados com LangGraph. Ele nunca substitui profissionais de saúde, não prescreve medicamentos e não fornece diagnóstico definitivo.
+Projeto acadêmico para o Tech Challenge Fase 3. O sistema simula um assistente virtual de apoio clínico especializado em saúde feminina, com foco em segurança da paciente, privacidade, LGPD, explainability e fluxos automatizados com LangGraph. A camada de dados foi organizada como um módulo próprio, com oito datasets sintéticos especializados para fine-tuning simulado, retrieval e suporte a fluxos clínicos. Ele nunca substitui profissionais de saúde, não prescreve medicamentos e não fornece diagnóstico definitivo.
 
 ## Objetivo
 
 Desenvolver uma aplicação com LLM e automação de fluxos para:
 
 - responder perguntas contextualizadas sobre saúde da mulher;
-- consultar base de conhecimento local sintética;
+- consultar base de conhecimento local sintética multi-domínio;
 - executar triagens e protocolos simulados com LangGraph;
 - registrar auditoria e proteger dados sensíveis;
 - bloquear respostas perigosas;
-- demonstrar pipeline de fine-tuning ou simulação técnica equivalente.
+- demonstrar pipeline de fine-tuning ou simulação técnica equivalente com datasets estruturados.
 
 ## Arquitetura
 
@@ -24,11 +24,12 @@ O projeto segue separação por responsabilidades:
 - `app/graphs/`: acesso aos fluxos LangGraph.
 - `app/security/`: acesso aos módulos de segurança.
 - `app/validators/`: validação e bloqueio de respostas inseguras.
-- `app/datasets/`: ponto interno para datasets sintéticos.
 - `app/logs/`: estrutura local de logs.
 - `app/tests/`: ponto reservado para testes no escopo do app.
 - `app/training/`: pipeline acadêmico de fine-tuning simulado.
-- `datasets/`: base sintética acadêmica e casos demonstrativos.
+- `datasets/`: datasets sintéticos especializados por domínio, casos demonstrativos e agregados de compatibilidade.
+- `data_pipeline/`: carga, preprocessamento, anonimização, formatação e validação dos datasets.
+- `vectorstore/`: embeddings locais, índice vetorial FAISS e integração com retrieval.
 - `tests/`: cobertura automatizada de segurança, fluxos e auditoria.
 - `docs/`: relatório técnico.
 
@@ -64,9 +65,10 @@ Arquivo de ambiente de exemplo:
 cp .env.example .env
 ```
 
-3. Preparar dataset para fine-tuning simulado:
+3. Gerar datasets sintéticos e preparar corpus para fine-tuning simulado:
 
 ```bash
+python datasets/generate_synthetic_datasets.py
 python app/training/prepare_dataset.py
 python app/training/simulate_finetuning.py
 python app/training/evaluate.py
@@ -74,9 +76,11 @@ python app/training/evaluate.py
 
 Arquivos gerados pelo pipeline:
 
+- `datasets/*/records.json`
 - `data/train.json`, `data/validation.json`, `data/test.json`
 - `data/train.jsonl`, `data/validation.jsonl`, `data/test.jsonl`
 - `data/fine_tuning_manifest.json`
+- `data/vector_index/index.json`
 
 4. Executar a API:
 
@@ -100,6 +104,7 @@ streamlit run streamlit_app.py
 
 ```bash
 python examples/run_demos.py
+python examples/data_layer_examples.py
 ```
 
 7. Rodar testes:
@@ -114,14 +119,38 @@ O assistente usa uma cadeia com LangChain para:
 
 1. receber a pergunta e contexto;
 2. anonimizar dados sensíveis;
-3. recuperar trechos relevantes da base sintética local;
+3. recuperar trechos relevantes dos datasets sintéticos especializados;
 4. construir resposta explicável com fonte e nível de confiança;
 5. validar a resposta antes do retorno.
 
 A recuperação é híbrida:
 
 - score lexical local para preservar previsibilidade acadêmica;
-- indexação vetorial com FAISS e embeddings determinísticas para demonstrar arquitetura RAG local sem depender de download de modelos.
+- indexação vetorial FAISS com embeddings determinísticas compatíveis com LangChain para demonstrar arquitetura RAG sem depender de modelos externos.
+
+## Camada de Dados
+
+Os dados foram separados em oito domínios, cada um com registros próprios em `datasets/<dominio>/records.json`:
+
+- `womens_health_qa`
+- `gynecological_protocols`
+- `obstetric_guidelines`
+- `violence_detection`
+- `contraceptive`
+- `breast_cancer`
+- `menstrual_health`
+- `maternal_mental_health`
+
+O pipeline correspondente foi implementado em:
+
+- `data_pipeline/loader.py`: carga dos oito datasets e manifesto de validação.
+- `data_pipeline/preprocess.py`: limpeza de texto, normalização médica, padronização e tokenização.
+- `data_pipeline/anonymizer.py`: mascaramento de nome, idade livre, CPF, telefone, e-mail e identificadores.
+- `data_pipeline/validator.py`: checagem de campos obrigatórios, consistência de risco e ausência de dados sensíveis.
+- `data_pipeline/formatter.py`: geração de corpus para instruction tuning e documentos para RAG.
+- `vectorstore/index.py`: índice vetorial FAISS, retriever LangChain e pipeline QA.
+
+Os fluxos LangGraph também passaram a consultar contexto protocolar derivado dos datasets por meio de um serviço dedicado, de modo que triagem, obstetrícia, prevenção e violência doméstica não dependem apenas de regras fixas.
 
 Cada resposta retorna:
 
@@ -190,6 +219,7 @@ flowchart TD
 ## Endpoints Disponíveis
 
 - `GET /health`: status da aplicação.
+- `GET /`: endpoint raiz com links úteis.
 - `POST /assist`: resposta assistida com explainability.
 - `POST /assistente/pergunta`: alias no formato solicitado pelo enunciado.
 - `GET /protocols`: lista protocolos sintéticos; aceita filtro `category`.
@@ -211,7 +241,7 @@ O projeto inclui uma interface em Streamlit com:
 - pergunta clínica contextualizada;
 - abas para os quatro fluxos LangGraph;
 - visualização de risco, confiança, fonte e limites;
-- navegação pelos protocolos sintéticos;
+- navegação pelos protocolos derivados dos datasets sintéticos;
 - painel de auditoria agregada por especialidade.
 
 Arquivo principal:
@@ -222,7 +252,7 @@ Arquivo principal:
 
 O projeto inclui uma simulação técnica de fine-tuning em `app/training/`:
 
-- `prepare_dataset.py`: normaliza terminologia, anonimiza dados, valida exemplos, resume balanceamento e exporta treino, validação e teste em JSON e JSONL.
+- `prepare_dataset.py`: consome os oito datasets, aplica preprocessamento, validação e exporta treino, validação e teste em JSON e JSONL.
 - `simulate_finetuning.py`: gera histórico de epochs e métricas sintéticas de grounding, segurança e consistência.
 - `evaluate.py`: resume métricas finais.
 
@@ -230,13 +260,14 @@ Em ambiente real, esse pipeline seria substituído por treinamento supervisionad
 
 O dataset sintético inclui:
 
-- FAQs em saúde da mulher;
-- protocolos ginecológicos e obstétricos;
-- sinais de alerta em violência doméstica;
-- laudos sintéticos de mamografia e ultrassom;
-- procedimento ginecológico sintético;
-- protocolo de pré-natal;
-- base sintética de segurança medicamentosa sem prescrição.
+- perguntas e respostas em saúde da mulher;
+- protocolos ginecológicos;
+- diretrizes obstétricas;
+- padrões de detecção de violência doméstica;
+- conhecimento contraceptivo;
+- rastreio de câncer de mama;
+- saúde menstrual;
+- saúde mental materna.
 
 ## Exemplos de Uso
 
@@ -277,6 +308,12 @@ Caso de recusa por segurança:
 - não existe integração real com prontuário, hospital, farmácia ou agenda;
 - a arquitetura demonstra onde protocolos, histórico, fluxos e auditoria seriam conectados;
 - toda integração descrita é meramente ilustrativa e acadêmica.
+
+## Referências do Módulo de Dados
+
+- visão geral da camada: [datasets/README.md](/mnt/c/desenvolvimento/repositorio/tech-challenge-fase3/datasets/README.md)
+- exemplo de uso programático: [examples/data_layer_examples.py](/mnt/c/desenvolvimento/repositorio/tech-challenge-fase3/examples/data_layer_examples.py)
+- testes da camada de dados: [tests/test_data_pipeline.py](/mnt/c/desenvolvimento/repositorio/tech-challenge-fase3/tests/test_data_pipeline.py)
 
 ## Casos de Uso
 

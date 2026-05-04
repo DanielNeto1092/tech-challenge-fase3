@@ -1,9 +1,12 @@
 from __future__ import annotations
 
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from fastapi import HTTPException
 
 from app.assistant import WomensHealthAssistant
+from app.config import ACCESS_LOG_FILE, AUDIT_LOG_FILE, LOGS_DIR
 from app.models import (
     AssistantRequest,
     AssistantResponse,
@@ -21,10 +24,24 @@ from app.graphs.violence_graph import run_violence_flow
 from app.security.access_monitor import AccessMonitor
 
 
+def reset_runtime_logs() -> None:
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+    for log_file in (ACCESS_LOG_FILE, AUDIT_LOG_FILE):
+        log_file.write_text("", encoding="utf-8")
+
+
+@asynccontextmanager
+async def application_lifespan(_: FastAPI):
+    # Reset execution logs on each application startup so dashboards start from the current run.
+    reset_runtime_logs()
+    yield
+
+
 app = FastAPI(
     title="Assistente Virtual Médico - Saúde e Segurança da Mulher",
     version="0.1.0",
     description="Ferramenta acadêmica de apoio clínico com guardrails de segurança.",
+    lifespan=application_lifespan,
 )
 assistant = WomensHealthAssistant()
 protocol_repository = ProtocolRepository()

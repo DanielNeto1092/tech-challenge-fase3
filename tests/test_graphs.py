@@ -15,6 +15,7 @@ def test_triage_flow() -> None:
     )
     assert result.urgency in {"urgent", "emergency"}
     assert "presencial" in result.escalation.lower()
+    assert any("base sintética consultada" in note.lower() for note in result.notes)
 
 
 def test_obstetric_flow() -> None:
@@ -27,6 +28,7 @@ def test_obstetric_flow() -> None:
     )
     assert result.urgency in {"urgent", "emergency"}
     assert any("pressão" in exam.lower() or "pressao" in exam.lower() for exam in result.suggested_exams)
+    assert any("base sintética consultada" in note.lower() for note in result.notes)
 
 
 def test_prevention_flow() -> None:
@@ -39,6 +41,7 @@ def test_prevention_flow() -> None:
     )
     assert result.urgency in {"routine", "priority"}
     assert len(result.suggested_exams) >= 2
+    assert any("base sintética consultada" in note.lower() for note in result.notes)
 
 
 def test_violence_flow() -> None:
@@ -51,3 +54,4 @@ def test_violence_flow() -> None:
     )
     assert result.urgency == "emergency"
     assert "equipe especializada" in result.escalation.lower()
+    assert any("base sintética consultada" in note.lower() for note in result.notes)

@@ -6,15 +6,23 @@ from app.domain.models import FlowResult, TriageInput
 from app.graphs.state import FlowState
 from app.security.audit import AuditLogger
 from app.security.risk import classify_risk
+from app.services.protocol_context_service import ProtocolContextService
 
 
 def _analyze_risk(state: FlowState) -> FlowState:
     payload = TriageInput.model_validate(state["input"])
     risk = classify_risk(payload.sintomas + [payload.contexto])
+    service = ProtocolContextService.build()
+    protocols = service.find_relevant(
+        " ".join(payload.sintomas + [payload.contexto]),
+        specialties={"ginecologia", "saude_da_mulher"},
+        categories={"sintomas_ginecologicos", "womens_health_qa", "saude_menstrual"},
+    )
     return {
         **state,
         "risk_level": risk,
         "notes": ["Triagem sintética focada em segurança e encaminhamento."],
+        "protocol_contexts": service.summarize_sources(protocols),
     }
 
 
@@ -35,6 +43,8 @@ def _suggest_exams(state: FlowState) -> FlowState:
     exams = ["exame ginecológico presencial"]
     if state["risk_level"] in {"high", "critical"}:
         exams.extend(["hemograma", "ultrassom pélvico", "avaliação de infecção conforme protocolo local"])
+    if state.get("protocol_contexts"):
+        exams.append("correlacionar achados com protocolo sintético recuperado")
     return {**state, "suggested_exams": exams}
 
 
@@ -59,6 +69,7 @@ def _build_guidance(state: FlowState) -> FlowState:
         "summary": summary,
         "recommended_actions": actions,
         "escalation": escalation,
+        "notes": state.get("notes", []) + state.get("protocol_contexts", []),
     }
 
 

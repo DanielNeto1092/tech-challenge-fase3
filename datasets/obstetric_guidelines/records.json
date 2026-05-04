@@ -1,0 +1,119 @@
+[
+  {
+    "doc_id": "gestacao-alerta-01",
+    "title": "Sinais de alerta na gravidez e pos-parto",
+    "condition": "Sinais de alerta na gestacao e no pos-parto",
+    "symptoms": [
+      "sangramento vaginal",
+      "cefaleia intensa",
+      "falta de ar",
+      "convulsoes"
+    ],
+    "risk_classification": "critico",
+    "recommended_actions": [
+      "encaminhar para atendimento imediato",
+      "priorizar seguranca materno-fetal",
+      "orientar servico de urgencia sem atraso"
+    ],
+    "requires_referral": true,
+    "source": "protocolo_obstetrico_simulado_v3",
+    "category": "obstetricia",
+    "specialty": "obstetricia",
+    "keywords": [
+      "gravidez",
+      "pos-parto",
+      "cefaleia intensa",
+      "sangramento"
+    ],
+    "representativity_tags": [
+      "alto_risco",
+      "prenatal_sus",
+      "zona_rural"
+    ]
+  },
+  {
+    "doc_id": "obstetrico-hipertensao-01",
+    "title": "Suspeita de sindrome hipertensiva na gestacao",
+    "condition": "Gestante com cefaleia intensa e alteracao visual",
+    "symptoms": [
+      "cefaleia intensa",
+      "visao emba\u00e7ada",
+      "edema subbito"
+    ],
+    "risk_classification": "alto",
+    "recommended_actions": [
+      "avaliar presencialmente no mesmo dia",
+      "verificar sinais de gravidade",
+      "encaminhar para obstetricia se persistirem sintomas"
+    ],
+    "requires_referral": true,
+    "source": "guideline_simulada_risco_gestacional_v1",
+    "category": "obstetricia",
+    "specialty": "obstetricia",
+    "keywords": [
+      "cefaleia",
+      "visao turva",
+      "edema"
+    ],
+    "representativity_tags": [
+      "alto_risco"
+    ]
+  },
+  {
+    "doc_id": "obstetrico-pre-natal-01",
+    "title": "Organizacao do pre-natal de rotina",
+    "condition": "Gestacao sem sinais de alarme",
+    "symptoms": [
+      "consulta de rotina",
+      "seguimento gestacional"
+    ],
+    "risk_classification": "baixo",
+    "recommended_actions": [
+      "manter consultas programadas",
+      "revisar exames do trimestre",
+      "reforcar educacao sobre sinais de alarme"
+    ],
+    "requires_referral": false,
+    "source": "guideline_simulada_pre_natal_v1",
+    "category": "obstetricia",
+    "specialty": "obstetricia",
+    "keywords": [
+      "pre-natal",
+      "rotina",
+      "exames"
+    ],
+    "representativity_tags": [
+      "atencao_primaria"
+    ]
+  },
+  {
+    "doc_id": "obstetrico-amamentacao-01",
+    "title": "Dor mamaria e dificuldade de pega",
+    "condition": "Dificuldade na amamentacao com dor mamaria",
+    "symptoms": [
+      "dor mamaria",
+      "fissura",
+      "dificuldade de pega",
+      "febre"
+    ],
+    "risk_classification": "moderado",
+    "recommended_actions": [
+      "avaliar tecnica de amamentacao",
+      "encaminhar para enfermagem ou banco de leite se persistir",
+      "priorizar avaliacao rapida se houver febre"
+    ],
+    "requires_referral": true,
+    "source": "guia_simulado_aleitamento_materno_v1",
+    "category": "amamentacao",
+    "specialty": "obstetricia",
+    "keywords": [
+      "amamentacao",
+      "fissura",
+      "mastite"
+    ],
+    "representativity_tags": [
+      "pos_parto",
+      "atencao_primaria"
+    ]
+  }
+]

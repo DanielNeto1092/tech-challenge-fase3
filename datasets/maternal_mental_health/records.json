@@ -1,0 +1,82 @@
+[
+  {
+    "doc_id": "saude-mental-01",
+    "title": "Saude mental materna no pos-parto",
+    "question": "Tristeza persistente no pos-parto merece avaliacao profissional?",
+    "context": "Pergunta sintetica sobre saude mental materna.",
+    "answer": "Tristeza persistente, desesperanca, insone relevante, culpa intensa ou dificuldade de vinculo merecem acolhimento e avaliacao profissional; autoagressao e urgencia.",
+    "source": "fluxo_simulado_saude_mental_materna_v1",
+    "risk_level": "alto",
+    "category": "saude_mental",
+    "specialty": "saude_mental",
+    "keywords": [
+      "pos-parto",
+      "tristeza persistente",
+      "autoagressao"
+    ],
+    "representativity_tags": [
+      "psicologia",
+      "psiquiatria",
+      "pos_parto"
+    ]
+  },
+  {
+    "doc_id": "maternal-mental-health-02",
+    "title": "Ansiedade no puerperio",
+    "question": "Ansiedade intensa no puerperio precisa de triagem?",
+    "context": "Pergunta sintetica sobre sofrimento psiquico no puerperio.",
+    "answer": "Ansiedade intensa com insone, exaustao, culpa, ataques de panico ou prejuizo funcional deve ser triada e encaminhada para avaliacao clinica e psicossocial.",
+    "source": "fluxo_simulado_saude_mental_materna_v1",
+    "risk_level": "moderado",
+    "category": "saude_mental",
+    "specialty": "saude_mental",
+    "keywords": [
+      "ansiedade",
+      "puerperio",
+      "panico"
+    ],
+    "representativity_tags": [
+      "pos_parto"
+    ]
+  },
+  {
+    "doc_id": "maternal-mental-health-03",
+    "title": "Dificuldade de vinculo com o bebe",
+    "question": "Dificuldade de vinculo com o bebe e um sinal relevante?",
+    "context": "Pergunta sintetica sobre alerta psicossocial no pos-parto.",
+    "answer": "Dificuldade de vinculo, apatia, evitacao do cuidado e desesperanca sao sinais relevantes e devem ser avaliados por equipe multiprofissional.",
+    "source": "fluxo_simulado_saude_mental_materna_v1",
+    "risk_level": "moderado",
+    "category": "saude_mental",
+    "specialty": "saude_mental",
+    "keywords": [
+      "vinculo",
+      "apatia",
+      "desesperanca"
+    ],
+    "representativity_tags": [
+      "assistencia_social",
+      "psicologia"
+    ]
+  },
+  {
+    "doc_id": "maternal-mental-health-04",
+    "title": "Ideias de ferir a si ou ao bebe",
+    "question": "Ideias de ferir a si ou ao bebe configuram urgencia?",
+    "context": "Pergunta sintetica sobre seguranca psiquiatrica.",
+    "answer": "Sim. Ideias de autoagressao ou de ferir o bebe configuram urgencia psiquiatrica e exigem avaliacao imediata e rede de apoio.",
+    "source": "fluxo_simulado_saude_mental_materna_v1",
+    "risk_level": "alto",
+    "category": "saude_mental",
+    "specialty": "saude_mental",
+    "keywords": [
+      "autoagressao",
+      "ferir o bebe",
+      "urgencia psiquiatrica"
+    ],
+    "representativity_tags": [
+      "psiquiatria",
+      "pos_parto"
+    ]
+  }
+]

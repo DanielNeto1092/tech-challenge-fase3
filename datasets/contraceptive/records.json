@@ -1,0 +1,80 @@
+[
+  {
+    "doc_id": "faq-contraceptivos-01",
+    "title": "Contraceptivos hormonais combinados",
+    "question": "Quais cuidados antecedem o uso de contraceptivo hormonal combinado?",
+    "context": "Pergunta sintetica para apoio educativo em planejamento reprodutivo.",
+    "answer": "Deve-se revisar risco cardiovascular, tabagismo, enxaqueca com aura, historico trombotico e necessidade de avaliacao presencial antes de iniciar ou trocar metodo.",
+    "source": "protocolo_simulado_planejamento_reprodutivo_v1",
+    "risk_level": "moderado",
+    "category": "contraceptivos",
+    "specialty": "planejamento_familiar",
+    "keywords": [
+      "contraceptivo",
+      "hormonal",
+      "trombose",
+      "tabagismo"
+    ],
+    "representativity_tags": [
+      "adolescentes",
+      "baixa_renda"
+    ]
+  },
+  {
+    "doc_id": "faq-contraceptivos-02",
+    "title": "Metodo de longa duracao",
+    "question": "Quando considerar metodo contraceptivo de longa duracao?",
+    "context": "Pergunta sintetica sem dados reais para educacao em saude.",
+    "answer": "Metodos de longa duracao podem ser discutidos quando ha interesse em alta eficacia, dificuldade com uso diario ou necessidade de planejamento reprodutivo continuado.",
+    "source": "protocolo_simulado_planejamento_reprodutivo_v1",
+    "risk_level": "baixo",
+    "category": "contraceptivos",
+    "specialty": "planejamento_familiar",
+    "keywords": [
+      "longo prazo",
+      "diu",
+      "implante"
+    ],
+    "representativity_tags": [
+      "atencao_primaria"
+    ]
+  },
+  {
+    "doc_id": "faq-contraceptivos-03",
+    "title": "Pos-parto e escolha do metodo",
+    "question": "Como organizar orientacao contraceptiva no pos-parto?",
+    "context": "Pergunta sintetica sobre cuidado pos-parto.",
+    "answer": "A orientacao deve considerar amamentacao, risco trombotico, preferencia da pessoa e necessidade de revisao presencial antes de definir metodo individual.",
+    "source": "protocolo_simulado_planejamento_reprodutivo_v1",
+    "risk_level": "moderado",
+    "category": "contraceptivos",
+    "specialty": "planejamento_familiar",
+    "keywords": [
+      "pos-parto",
+      "amamentacao",
+      "metodo"
+    ],
+    "representativity_tags": [
+      "pos_parto"
+    ]
+  },
+  {
+    "doc_id": "faq-contraceptivos-04",
+    "title": "Sinais para revisao do metodo",
+    "question": "Quais sinais pedem revisao clinica do metodo atual?",
+    "context": "Pergunta sintetica sobre seguimento em contracepcao.",
+    "answer": "Dor toracica, falta de ar, cefaleia intensa, sangramento importante ou desconforto persistente exigem avaliacao profissional e nao devem ser manejados como ajuste autonomo.",
+    "source": "protocolo_simulado_planejamento_reprodutivo_v1",
+    "risk_level": "alto",
+    "category": "contraceptivos",
+    "specialty": "planejamento_familiar",
+    "keywords": [
+      "cefaleia intensa",
+      "falta de ar",
+      "sangramento"
+    ],
+    "representativity_tags": [
+      "seguranca_medicamentosa"
+    ]
+  }
+]

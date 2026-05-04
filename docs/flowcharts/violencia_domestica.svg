@@ -35,14 +35,14 @@
   <text class="label" x="895" y="132" text-anchor="middle">Documentação</text>
   <text class="label" x="895" y="158" text-anchor="middle">segura</text>
 
-  <rect class="box" x="1010" y="95" width="160" height="92" rx="18" ry="18"/>
-  <text class="label" x="1090" y="125" text-anchor="middle">Acompanhamento</text>
-  <text class="label" x="1090" y="151" text-anchor="middle">e</text>
-  <text class="label" x="1090" y="177" text-anchor="middle">seguimento</text>
+  <rect class="box" x="990" y="86" width="190" height="110" rx="18" ry="18"/>
+  <text class="label" x="1085" y="122" text-anchor="middle">Acompanhamento</text>
+  <text class="label" x="1085" y="149" text-anchor="middle">e</text>
+  <text class="label" x="1085" y="176" text-anchor="middle">seguimento</text>
 
   <line class="arrow" x1="190" y1="141" x2="220" y2="141"/>
   <line class="arrow" x1="380" y1="141" x2="410" y2="141"/>
   <line class="arrow" x1="580" y1="141" x2="610" y2="141"/>
   <line class="arrow" x1="780" y1="141" x2="810" y2="141"/>
-  <line class="arrow" x1="980" y1="141" x2="1010" y2="141"/>
+  <line class="arrow" x1="980" y1="141" x2="990" y2="141"/>
 </svg>

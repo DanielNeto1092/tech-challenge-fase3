@@ -6,7 +6,7 @@
 
 ### Resumo
 
-Este relatório técnico apresenta o desenvolvimento de um assistente virtual médico especializado em saúde e segurança da mulher, concebido como ferramenta acadêmica de apoio à decisão clínica. A solução integra modelos de linguagem, recuperação contextual de conhecimento, fluxos automatizados com LangGraph e mecanismos explícitos de segurança, explicabilidade e proteção de dados. O sistema foi estruturado para responder a consultas contextualizadas, apoiar triagem ginecológica e obstétrica, identificar sinais compatíveis com violência doméstica, sugerir organização de exames preventivos e reforçar a necessidade de encaminhamento profissional em situações críticas. O projeto utiliza exclusivamente dados sintéticos e processos simulados de fine-tuning, preservando aderência ética, conformidade com princípios da LGPD e limitação metodológica compatível com ambiente acadêmico. São detalhados o processo de curadoria de dados, técnicas de anonimização, métricas de avaliação, fluxos clínicos, guardrails de segurança, análise de bias e cenários de uso. Conclui-se que a arquitetura proposta demonstra viabilidade técnica para apoio especializado em saúde da mulher, desde que mantido o princípio de supervisão clínica obrigatória e o reconhecimento explícito de que a ferramenta não substitui profissionais habilitados.
+Este relatório técnico apresenta o desenvolvimento de um assistente virtual médico especializado em saúde e segurança da mulher, concebido como ferramenta acadêmica de apoio à decisão clínica. A solução integra modelos de linguagem, recuperação contextual de conhecimento, fluxos automatizados com LangGraph e mecanismos explícitos de segurança, explicabilidade e proteção de dados. O sistema foi estruturado para responder a consultas contextualizadas, apoiar triagem ginecológica e obstétrica, identificar sinais compatíveis com violência doméstica, sugerir organização de exames preventivos e reforçar a necessidade de encaminhamento profissional em situações críticas. O projeto utiliza exclusivamente dados sintéticos e processos simulados de fine-tuning, preservando aderência ética, conformidade com princípios da LGPD e limitação metodológica compatível com ambiente acadêmico. A base de dados foi organizada em oito domínios especializados: perguntas e respostas em saúde da mulher, protocolos ginecológicos, diretrizes obstétricas, padrões de violência doméstica, conhecimento contraceptivo, rastreio de câncer de mama, saúde menstrual e saúde mental materna. São detalhados o processo de curadoria de dados, técnicas de anonimização, métricas de avaliação, fluxos clínicos, guardrails de segurança, análise de bias e cenários de uso. Conclui-se que a arquitetura proposta demonstra viabilidade técnica para apoio especializado em saúde da mulher, desde que mantido o princípio de supervisão clínica obrigatória e o reconhecimento explícito de que a ferramenta não substitui profissionais habilitados.
 
 **Palavras-chave:** inteligência artificial em saúde; LLM; LangChain; LangGraph; saúde da mulher; segurança da paciente; LGPD; apoio à decisão clínica.
 
@@ -24,7 +24,7 @@ O uso de inteligência artificial na saúde tem evoluído de sistemas de apoio e
 
 Além da complexidade biomédica, a atenção à saúde feminina é atravessada por fatores culturais, territoriais, econômicos e relacionais. O acesso desigual a exames preventivos, a invisibilização da violência de gênero, o subdiagnóstico de sofrimento psíquico no puerpério e a necessidade de linguagem inclusiva tornam inadequada a adoção de respostas automatizadas sem mecanismos de proteção, contextualização e validação humana. Desse modo, a construção de um assistente virtual para esse domínio deve combinar inteligência computacional com limites clínicos explícitos, rastreabilidade e governança de dados.
 
-Este projeto, desenvolvido no âmbito do Tech Challenge – Fase 3, propõe a criação de um assistente virtual médico especializado em saúde e segurança da mulher, utilizando arquitetura baseada em Python, LangChain, LangGraph, recuperação contextual local, dados sintéticos e pipeline acadêmico de fine-tuning simulado. O sistema foi concebido como ferramenta de apoio à decisão clínica, não como substituto da prática profissional. Seu objetivo é auxiliar na consulta a protocolos, triagem inicial, organização de fluxos e priorização de encaminhamentos, mantendo sempre a obrigatoriedade de validação profissional e a proteção de informações sensíveis.
+Este projeto, desenvolvido no âmbito do Tech Challenge – Fase 3, propõe a criação de um assistente virtual médico especializado em saúde e segurança da mulher, utilizando arquitetura baseada em Python, LangChain, LangGraph, recuperação contextual local, dados sintéticos e pipeline acadêmico de fine-tuning simulado. O sistema foi concebido como ferramenta de apoio à decisão clínica, não como substituto da prática profissional. Seu objetivo é auxiliar na consulta a protocolos, triagem inicial, organização de fluxos e priorização de encaminhamentos, mantendo sempre a obrigatoriedade de validação profissional e a proteção de informações sensíveis. Para isso, a camada de dados foi explicitamente separada em um módulo próprio de engenharia de dados, com carga, preprocessamento, anonimização, validação, formatação para instruction tuning e indexação vetorial FAISS.
 
 ## 2. Processo de Fine-Tuning Especializado
 
@@ -32,21 +32,33 @@ Este projeto, desenvolvido no âmbito do Tech Challenge – Fase 3, propõe a cr
 
 O processo de fine-tuning adotado neste projeto é simulado e acadêmico, porém foi desenhado para refletir, de maneira tecnicamente plausível, como uma instituição de saúde poderia organizar um pipeline especializado para saúde da mulher. A premissa central foi que um modelo com utilidade clínica local deve ser treinado ou adaptado não apenas com linguagem médica geral, mas com conteúdo específico do domínio, organizado segundo riscos, protocolos, situações de exceção e cenários assistenciais representativos.
 
-O primeiro conjunto curado foi composto por protocolos ginecológicos e obstétricos sintéticos. Nesse bloco foram modeladas situações relacionadas a dor pélvica, corrimento, prurido, sangramento uterino anormal, risco gestacional, sinais de alarme no pós-parto e emergências obstétricas. Esses conteúdos servem como base para a triagem inicial e para a recuperação de orientação segura ancorada em documento sintético.
+O primeiro conjunto curado foi composto por perguntas e respostas em saúde da mulher e protocolos ginecológicos sintéticos. Nesse bloco foram modeladas situações relacionadas a dor pélvica, corrimento, prurido, sangramento uterino anormal e organização de consulta preventiva. Esses conteúdos servem como base para a triagem inicial e para a recuperação de orientação segura ancorada em documento sintético.
 
-O segundo conjunto reuniu diretrizes ligadas ao rastreamento de câncer de mama e colo do útero, incluindo lógica de exames preventivos, necessidade de correlação clínica de laudos, critérios de encaminhamento e identificação de atraso em rastreamento. Como o objetivo não é emitir diagnóstico, a curadoria enfatizou o papel do assistente como organizador de cuidado preventivo e não como interpretador definitivo de achados.
+O segundo conjunto reuniu diretrizes obstétricas, incluindo lógica de risco gestacional, sinais de alarme na gravidez e no pós-parto, amamentação e organização do pré-natal. O terceiro conjunto concentrou rastreamento de câncer de mama e colo do útero, incluindo lógica de exames preventivos, necessidade de correlação clínica de laudos, critérios de encaminhamento e identificação de atraso em rastreamento. Como o objetivo não é emitir diagnóstico, a curadoria enfatizou o papel do assistente como organizador de cuidado preventivo e não como interpretador definitivo de achados.
 
-O terceiro conjunto contemplou saúde mental materna, incluindo tristeza persistente, ansiedade, desesperança, dificuldade de vínculo, culpa intensa e risco psiquiátrico no pós-parto. A curadoria desse bloco foi essencial para garantir que o sistema reconhecesse sofrimento psíquico como prioridade clínica e não como mera informação acessória.
+O quarto conjunto contemplou saúde mental materna, incluindo tristeza persistente, ansiedade, desesperança, dificuldade de vínculo, culpa intensa e risco psiquiátrico no pós-parto. A curadoria desse bloco foi essencial para garantir que o sistema reconhecesse sofrimento psíquico como prioridade clínica e não como mera informação acessória.
 
-O quarto conjunto abrangeu sinais de violência doméstica, como medo do parceiro, controle coercitivo, isolamento, lesões recorrentes e risco iminente. Esse domínio exigiu tratamento particularmente cuidadoso, com ênfase em segurança, acolhimento, confidencialidade e encaminhamento para rede especializada.
+O quinto conjunto abrangeu sinais de violência doméstica, como medo do parceiro, controle coercitivo, isolamento, lesões recorrentes e risco iminente. Esse domínio exigiu tratamento particularmente cuidadoso, com ênfase em segurança, acolhimento, confidencialidade e encaminhamento para rede especializada.
 
-O quinto conjunto abordou planejamento reprodutivo, contraceptivos, menopausa, climatério, ciclo menstrual e distúrbios hormonais. O objetivo foi permitir que o sistema respondesse a dúvidas frequentes e organizasse raciocínio de apoio sem ultrapassar os limites de prescrição ou diagnóstico.
+O sexto e o sétimo conjuntos abordaram planejamento reprodutivo, contraceptivos, menopausa, climatério, ciclo menstrual e distúrbios hormonais. O objetivo foi permitir que o sistema respondesse a dúvidas frequentes e organizasse raciocínio de apoio sem ultrapassar os limites de prescrição ou diagnóstico. O oitavo conjunto consolidou conhecimento especializado em saúde menstrual, incluindo atraso menstrual, dismenorreia e monitoramento de padrão cíclico.
 
 Também foram incluídos documentos especializados sintéticos, como laudos de mamografia, laudos de ultrassom pélvico, procedimento ginecológico, relatório de violência, protocolo de pré-natal e base de segurança medicamentosa. Esses artefatos foram criados para aproximar a base de um cenário de uso hospitalar, no qual a informação não aparece apenas em formato de perguntas frequentes, mas em múltiplos tipos documentais.
 
 Do ponto de vista de balanceamento, a base foi distribuída entre diferentes categorias e especialidades correlatas, como ginecologia, obstetrícia, mastologia, assistência social, saúde mental, farmácia clínica e endocrinologia ginecológica. O sistema também registra marcadores sintéticos de representatividade socioeconômica e territorial, como atenção primária, cuidado pelo SUS, área rural, periferia urbana, adolescência e vulnerabilidade social. Esses marcadores não resolvem integralmente o problema de representatividade, mas ajudam a estruturar avaliação futura de viés e cobertura.
 
 Em ambiente real, a curadoria exigiria validação contínua com especialistas e revisão periódica dos protocolos. No projeto acadêmico, essa revisão foi representada de forma simulada e documentada, sem alegação de homologação institucional real.
+
+### 2.1.1 Estrutura final dos datasets
+
+A camada de dados foi concluída com oito datasets independentes, cada um armazenado em diretório próprio e serializado em JSON. Os domínios implementados foram: perguntas e respostas em saúde da mulher, protocolos ginecológicos, diretrizes obstétricas, padrões de violência doméstica, conhecimento contraceptivo, rastreio de câncer de mama, saúde menstrual e saúde mental materna.
+
+Cada domínio recebeu quatro registros sintéticos, totalizando 32 exemplos válidos no corpus consolidado. Essa escolha privilegiou cobertura clínica controlada e rastreável, em vez de volume artificialmente inflado. O objetivo do projeto foi demonstrar uma arquitetura reprodutível de engenharia de dados para IA em saúde, com datasets pequenos, auditáveis e semanticamente organizados.
+
+### 2.1.2 Modelagem dos registros
+
+Os dados foram modelados em três formatos principais. O primeiro é o formato de pergunta e resposta, com campos para pergunta, contexto, resposta, fonte simulada e nível de risco. O segundo é o formato de protocolo, com condição, sintomas, classificação de risco, ações recomendadas e indicação de encaminhamento. O terceiro é o formato de violência, com relato textual, score numérico de risco, nível de risco e necessidade de intervenção.
+
+Essa padronização foi importante porque permite que o mesmo ecossistema de dados alimente diferentes partes do sistema: fine-tuning simulado, retrieval contextual e fluxos clínicos automatizados. Ao mesmo tempo, a estrutura explícita dos campos facilita validação automática, rastreabilidade e futura expansão do corpus.
 
 ### 2.2 Técnicas de anonimização para dados sensíveis
 
@@ -61,6 +73,14 @@ O terceiro mecanismo é a pseudonimização de acessos, complementada por cripto
 Para dados ligados à violência doméstica, o tratamento é reforçado por desenho: a ferramenta prioriza documentação segura, acesso mínimo necessário e não incentiva exposição indevida da paciente. Já em saúde mental materna, a proteção reforçada decorre do potencial de estigmatização e do risco clínico associado.
 
 Em complemento, o sistema trabalha com generalização de atributos sensíveis, privilegiando categorias amplas de risco, especialidade e contexto assistencial, em vez de granularidade excessiva que favoreça reidentificação. Essa estratégia dialoga com princípios da LGPD, especialmente necessidade, adequação, segurança e prevenção.
+
+### 2.2.1 Pipeline operacional de dados
+
+Para tornar o tratamento de dados auditável, a solução foi dividida em módulos específicos. O diretório `datasets` armazena os oito domínios clínicos e os casos demonstrativos. O módulo `data_pipeline` concentra carga, preprocessamento, anonimização, formatação e validação. O módulo `vectorstore` materializa embeddings determinísticos locais, índice vetorial FAISS e retriever reutilizável.
+
+No preprocessamento, o pipeline realiza limpeza textual, normalização médica, padronização de termos e tokenização básica. Na anonimização, remove nomes, telefones, CPF, e-mails, números identificáveis e padrões sensíveis de texto livre. Na validação, verifica campos obrigatórios, intervalo de risco, coerência entre risco alto e encaminhamento e ausência de conteúdo potencialmente prescritivo.
+
+Esse desenho aproxima o projeto de uma arquitetura real de engenharia de dados para IA. Em vez de tratar dataset como artefato estático, o repositório passa a explicitar um ciclo reprodutível de geração, transformação, validação e indexação.
 
 ### 2.3 Métricas de avaliação específicas para domínio médico feminino
 
@@ -79,6 +99,8 @@ A interpretabilidade da resposta também foi tratada como métrica. Respostas pr
 O nível de confiança, por sua vez, não representa certeza médica, mas robustez do grounding documental. Sua avaliação deve considerar coerência entre a força da recuperação e o grau de assertividade textual.
 
 Por fim, a taxa de encaminhamento adequado e a segurança da resposta representam indicadores críticos. O sistema precisa encaminhar corretamente casos de violência, risco obstétrico, sofrimento mental agudo e sintomas ginecológicos alarmantes, ao mesmo tempo em que bloqueia respostas de prescrição ou diagnóstico definitivo.
+
+O manifesto gerado pelo pipeline sintetiza o balanceamento do corpus por categoria, especialidade e marcadores de representatividade. No estado atual, o conjunto final contém 32 registros válidos, distribuídos igualmente entre os oito domínios, sem erros de validação automática. Em especialidades, a maior concentração está em ginecologia e obstetrícia, o que é coerente com a natureza do problema, mas sem excluir cobertura para proteção social, mastologia, planejamento familiar e saúde mental.
 
 ### 2.4 Validação por especialistas (Simulada)
 
@@ -104,6 +126,14 @@ Em situações de violência doméstica, o sistema reconhece sinais relevantes, 
 
 Também há suporte para saúde reprodutiva e planejamento familiar, além de integração conceitual com histórico clínico por meio de contexto estruturado na entrada.
 
+### 3.1.1 Uso efetivo dos datasets na aplicação
+
+Os datasets não permanecem apenas como documentação auxiliar. Eles são carregados pelo módulo de conhecimento, convertidos em documentos estruturados para retrieval e usados como fonte do corpus de instruction tuning simulado. Em termos práticos, isso significa que a aplicação efetivamente consulta o material sintético durante a recuperação de contexto.
+
+O fluxo de uso acontece em três etapas. Primeiro, os registros dos oito domínios são carregados e normalizados. Segundo, esses registros são transformados em documentos de conhecimento com título, categoria, conteúdo, palavras-chave e tags de segurança. Terceiro, os documentos alimentam o retriever híbrido e o índice vetorial FAISS, de modo que as respostas finais do assistente dependem da base estruturada e não de trechos textuais soltos.
+
+Além disso, os fluxos LangGraph foram conectados a um serviço de contexto protocolar. Isso permite que triagem ginecológica, obstetrícia, prevenção e violência doméstica acrescentem ao estado do grafo referências recuperadas dos datasets especializados durante a execução, reforçando aderência a protocolo e reduzindo dependência exclusiva de regras fixas.
+
 ### 3.2 Limitações e protocolos de segurança
 
 O sistema não realiza diagnóstico definitivo, não prescreve medicamentos e não substitui profissionais de saúde. Todas as respostas incluem limite explícito de atuação e necessidade de validação profissional.
@@ -114,7 +144,7 @@ Casos críticos são sempre encaminhados para atendimento presencial ou equipe e
 
 A integração com sistemas hospitalares foi desenhada apenas em nível conceitual. Em uma implementação real, o assistente poderia se conectar a prontuário eletrônico, bases de exames, sistemas de rastreamento, agenda clínica, módulos de documentação multiprofissional e mecanismos institucionais de alerta.
 
-Nessa arquitetura, LangChain funcionaria como orquestrador de recuperação de contexto, composição de prompt, validação de resposta e explicabilidade. LangGraph, por sua vez, sustentaria fluxos clínicos auditáveis e rastreáveis. Ainda assim, nenhuma dessas integrações foi realizada com sistemas reais, e o projeto não faz qualquer afirmação de uso hospitalar efetivo.
+Nessa arquitetura, LangChain funciona como orquestrador de recuperação de contexto, pipeline RAG, composição de resposta e encapsulamento do retriever. LangGraph, por sua vez, sustenta fluxos clínicos auditáveis e rastreáveis. Ainda assim, nenhuma dessas integrações foi realizada com sistemas reais, e o projeto não faz qualquer afirmação de uso hospitalar efetivo.
 
 ### 3.4 Casos de uso e cenários de aplicação
 
@@ -133,17 +163,52 @@ Em todos os casos, o sistema atua como apoio à decisão clínica e à organiza�
 
 ### 4.1 Fluxo de Triagem Ginecológica
 
+```mermaid
+flowchart TD
+    A[Sintomas relatados] --> B[Analise de risco]
+    B --> C[Classificacao de urgencia]
+    C --> D[Sugestao de exames]
+    D --> E[Orientacoes iniciais]
+    E --> F[Agendamento ou encaminhamento]
+```
+
 ![Fluxo de Triagem Ginecológica](flowcharts/triagem_ginecologica.svg)
 
 ### 4.2 Fluxo de Violência Doméstica
+
+```mermaid
+flowchart TD
+    A[Sinais de alerta] --> B[Avaliacao de risco]
+    B --> C[Protocolo de seguranca]
+    C --> D[Equipe especializada]
+    D --> E[Documentacao segura]
+    E --> F[Acompanhamento]
+```
 
 ![Fluxo de Violência Doméstica](flowcharts/violencia_domestica.svg)
 
 ### 4.3 Fluxo Obstétrico
 
+```mermaid
+flowchart TD
+    A[Dados da gestante] --> B[Risco gestacional]
+    B --> C[Orientacoes]
+    C --> D[Exames]
+    D --> E[Alertas]
+    E --> F[Acompanhamento]
+```
+
 ![Fluxo Obstétrico](flowcharts/obstetrico.svg)
 
 ### 4.4 Fluxo de Prevenção
+
+```mermaid
+flowchart TD
+    A[Historico] --> B[Exames pendentes]
+    B --> C[Orientacao]
+    C --> D[Agendamento]
+    D --> E[Lembretes]
+```
 
 ![Fluxo de Prevenção](flowcharts/prevencao.svg)
 
@@ -152,6 +217,8 @@ Em todos os casos, o sistema atua como apoio à decisão clínica e à organiza�
 ### 5.1 Métricas de precisão
 
 As métricas de precisão devem ser analisadas por cenário clínico. Em geral, respostas preventivas e FAQs são mais estáveis, enquanto violência doméstica, obstetrícia e saúde mental exigem avaliação mais conservadora. No projeto, a consistência é demonstrada por testes automatizados, grounding documental e métricas sintéticas de segurança e recuperação.
+
+Além da avaliação conceitual, a implementação foi acompanhada de validações automatizadas da camada de dados. Esses testes verificam mascaramento de identificadores, carregamento dos oito domínios, validade estrutural dos registros, recuperação de documentos relevantes pelo índice vetorial e presença de alerta de validação profissional na saída do pipeline RAG. Com isso, a camada de dados deixa de ser apenas declaratória e passa a ser verificável dentro do próprio repositório.
 
 ### 5.2 Análise de bias e equidade
 

@@ -12,3 +12,4 @@ class FlowState(TypedDict, total=False):
     suggested_exams: list[str]
     escalation: str
     notes: list[str]
+    protocol_contexts: list[str]

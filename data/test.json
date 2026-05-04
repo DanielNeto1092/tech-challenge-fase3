@@ -1,56 +1,80 @@
 [
   {
-    "instruction": "Explique com seguran\u00e7a o tema: Contraceptivos hormonais combinados",
-    "input": "m\u00e9todos combinados exigem avalia\u00e7\u00e3o individual de risco cardiovascular, tabagismo, enxaqueca com aura e hist\u00f3rico tromb\u00f3tico. em d\u00favida cl\u00ednica, orientar avalia\u00e7\u00e3o m\u00e9dica presencial antes de iniciar ou trocar m\u00e9todo.",
-    "output": {
-      "summary": "M\u00e9todos combinados exigem avalia\u00e7\u00e3o individual de risco cardiovascular, tabagismo, enxaqueca com aura e hist\u00f3rico tromb\u00f3tico. Em d\u00favida cl\u00ednica, orientar avalia\u00e7\u00e3o m\u00e9dica presencial antes de iniciar ou trocar m\u00e9todo.",
-      "source": "Protocolo Sint\u00e9tico de Planejamento Reprodutivo v1",
-      "category": "contraceptivos",
-      "specialty": "planejamento_familiar"
-    },
+    "instruction": "Responda com seguranca a uma pergunta de maternal mental health.",
+    "input": "pergunta: ideias de ferir a si ou ao bebe configuram urgencia contexto: pergunta sintetica sobre seguranca psiquiatrica.",
+    "output": "Sim. ideias de autoagressao ou de ferir o bebe configuram urgencia psiquiatrica e exigem avaliacao imediata e rede de apoio. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
     "metadata": {
-      "doc_id": "faq-contraceptivos-01",
-      "document_type": "faq",
-      "representativity_tags": [
-        "adolescentes",
-        "atencao_primaria",
-        "baixa_renda"
-      ]
-    }
-  },
-  {
-    "instruction": "Explique com seguran\u00e7a o tema: Corrimento, prurido e dor p\u00e9lvica",
-    "input": "dor p\u00e9lvica intensa, febre, sangramento importante, desmaio, secre\u00e7\u00e3o com odor forte persistente ou piora r\u00e1pida s\u00e3o sinais de alerta e exigem avalia\u00e7\u00e3o presencial priorit\u00e1ria. corrimentos leves sem sinais sist\u00eamicos podem receber orienta\u00e7\u00e3o inicial e agendamento ambulatorial.",
-    "output": {
-      "summary": "Dor p\u00e9lvica intensa, febre, sangramento importante, desmaio, secre\u00e7\u00e3o com odor forte persistente ou piora r\u00e1pida s\u00e3o sinais de alerta e exigem avalia\u00e7\u00e3o presencial priorit\u00e1ria. Corrimentos leves sem sinais sist\u00eamicos podem receber orienta\u00e7\u00e3o inicial e agendamento ambulatorial.",
-      "source": "Linha de Cuidado Ginecol\u00f3gico Sint\u00e9tica v2",
-      "category": "sintomas_ginecologicos",
-      "specialty": "ginecologia"
-    },
-    "metadata": {
-      "doc_id": "gineco-sintomas-01",
+      "doc_id": "maternal-mental-health-04",
+      "dataset": "maternal_mental_health",
+      "source": "fluxo_simulado_saude_mental_materna_v1",
+      "specialty": "saude_mental",
       "document_type": "protocolo",
       "representativity_tags": [
-        "periferia_urbana",
-        "atencao_secundaria"
+        "psiquiatria",
+        "pos_parto"
       ]
     }
   },
   {
-    "instruction": "Explique com seguran\u00e7a o tema: Procedimento ginecol\u00f3gico: colposcopia e seguimento",
-    "input": "a indica\u00e7\u00e3o de colposcopia depende do rastreamento pr\u00e9vio e da estratifica\u00e7\u00e3o de risco. sangramento importante ap\u00f3s procedimento, dor intensa ou febre exigem reavalia\u00e7\u00e3o presencial. a conduta definitiva depende de profissional habilitado.",
-    "output": {
-      "summary": "A indica\u00e7\u00e3o de colposcopia depende do rastreamento pr\u00e9vio e da estratifica\u00e7\u00e3o de risco. Sangramento importante ap\u00f3s procedimento, dor intensa ou febre exigem reavalia\u00e7\u00e3o presencial. A conduta definitiva depende de profissional habilitado.",
-      "source": "Manual Sint\u00e9tico de Procedimentos Ginecol\u00f3gicos v1",
-      "category": "documentos_especializados",
-      "specialty": "patologia_cervical"
-    },
+    "instruction": "Organize um protocolo sintetico para Sinais de alerta na gestacao e no pos-parto.",
+    "input": "condicao: sinais de alerta na gestacao e no pos-parto sintomas: sangramento vaginal, cefaleia intensa, falta de ar, convulsoes classificacao: critico",
+    "output": "Acoes recomendadas: Encaminhar para atendimento imediato; Priorizar seguranca materno-fetal; Orientar servico de urgencia sem atraso. Encaminhamento obrigatorio: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
     "metadata": {
-      "doc_id": "procedimento-colposcopia-01",
-      "document_type": "procedimento_ginecologico",
+      "doc_id": "gestacao-alerta-01",
+      "dataset": "obstetric_guidelines",
+      "source": "protocolo_obstetrico_simulado_v3",
+      "specialty": "obstetricia",
+      "document_type": "protocolo",
       "representativity_tags": [
-        "saude_publica",
-        "rastreio_colo_utero"
+        "alto_risco",
+        "prenatal_sus",
+        "zona_rural"
+      ]
+    }
+  },
+  {
+    "instruction": "Responda com seguranca a uma pergunta de breast cancer.",
+    "input": "pergunta: historico familiar muda a organizacao do rastreio contexto: pergunta sintetica sobre prevencao personalizada.",
+    "output": "Historico familiar pode antecipar necessidade de avaliacao individualizada e revisao profissional do plano de rastreio, sempre conforme diretrizes locais. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+    "metadata": {
+      "doc_id": "breast-cancer-qa-04",
+      "dataset": "breast_cancer",
+      "source": "guideline_simulada_mastologia_v1",
+      "specialty": "mastologia_preventiva",
+      "document_type": "protocolo",
+      "representativity_tags": [
+        "equidade_acesso"
+      ]
+    }
+  },
+  {
+    "instruction": "Responda com seguranca a uma pergunta de womens health qa.",
+    "input": "pergunta: quando dor pelvica exige avaliacao presencial contexto: pessoa adulta com dor pelvica de inicio recente e sem uso de dados reais.",
+    "output": "Dor pelvica com febre, desmaio, rigidez abdominal, sangramento importante ou piora rapida exige avaliacao presencial prioritaria. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+    "metadata": {
+      "doc_id": "womens-health-qa-01",
+      "dataset": "womens_health_qa",
+      "source": "guideline_simulada_saude_mulher_v1",
+      "specialty": "saude_da_mulher",
+      "document_type": "faq",
+      "representativity_tags": [
+        "atencao_primaria",
+        "periferia_urbana"
+      ]
+    }
+  },
+  {
+    "instruction": "Organize um protocolo sintetico para Sangramento apos relacao sexual.",
+    "input": "condicao: sangramento apos relacao sexual sintomas: sangramento pos-coito, corrimento, dor na relacao sexual classificacao: moderado",
+    "output": "Acoes recomendadas: Organizar consulta com exame especular; Revisar preventivos em atraso; Acelerar avaliacao se houver dor intensa ou sangramento persistente. Encaminhamento obrigatorio: sim. Ferramenta sintetica de apoio. Validacao profissional obrigatoria. Nao realizar prescricao nem diagnostico definitivo.",
+    "metadata": {
+      "doc_id": "gineco-rastreio-ectopia-01",
+      "dataset": "gynecological_protocols",
+      "source": "protocolo_simulado_ginecologia_ambulatorial_v1",
+      "specialty": "ginecologia",
+      "document_type": "protocolo",
+      "representativity_tags": [
+        "atencao_primaria"
       ]
     }
   }

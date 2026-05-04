@@ -1,0 +1,82 @@
+[
+  {
+    "doc_id": "womens-health-qa-01",
+    "title": "Dor pelvica e avaliacao inicial",
+    "question": "Quando dor pelvica exige avaliacao presencial?",
+    "context": "Pessoa adulta com dor pelvica de inicio recente e sem uso de dados reais.",
+    "answer": "Dor pelvica com febre, desmaio, rigidez abdominal, sangramento importante ou piora rapida exige avaliacao presencial prioritaria.",
+    "source": "guideline_simulada_saude_mulher_v1",
+    "risk_level": "alto",
+    "category": "womens_health_qa",
+    "specialty": "saude_da_mulher",
+    "keywords": [
+      "dor pelvica",
+      "febre",
+      "sangramento",
+      "desmaio"
+    ],
+    "representativity_tags": [
+      "atencao_primaria",
+      "periferia_urbana"
+    ]
+  },
+  {
+    "doc_id": "womens-health-qa-02",
+    "title": "Leucorreia sem sinais sistemicos",
+    "question": "Corrimento leve pode aguardar consulta ambulatorial?",
+    "context": "Relato sintetico de corrimento leve sem febre e sem dor intensa.",
+    "answer": "Sem sinais sistemicos, a orientacao segura e organizar consulta programada, reforcando retorno rapido se surgirem dor intensa, odor forte persistente ou febre.",
+    "source": "guideline_simulada_saude_mulher_v1",
+    "risk_level": "moderado",
+    "category": "womens_health_qa",
+    "specialty": "ginecologia",
+    "keywords": [
+      "corrimento",
+      "odor forte",
+      "febre"
+    ],
+    "representativity_tags": [
+      "atencao_secundaria"
+    ]
+  },
+  {
+    "doc_id": "womens-health-qa-03",
+    "title": "Planejamento de consulta ginecologica",
+    "question": "Como organizar uma consulta preventiva de rotina?",
+    "context": "Pergunta sintetica sobre prevencao em saude da mulher.",
+    "answer": "A consulta preventiva deve revisar historico menstrual, vida sexual, exames em atraso, vacinacao, fatores de risco e sinais de alarme que justifiquem avaliacao presencial antecipada.",
+    "source": "guideline_simulada_saude_mulher_v1",
+    "risk_level": "baixo",
+    "category": "womens_health_qa",
+    "specialty": "saude_da_mulher",
+    "keywords": [
+      "prevencao",
+      "consulta",
+      "vacinacao"
+    ],
+    "representativity_tags": [
+      "saude_publica"
+    ]
+  },
+  {
+    "doc_id": "womens-health-qa-04",
+    "title": "Pos-parto e sinais de alerta",
+    "question": "Quais sinais no pos-parto exigem revisao clinica rapida?",
+    "context": "Pergunta sintetica sobre seguimento pos-parto.",
+    "answer": "Sangramento excessivo, febre, dor mamaria intensa, tristeza persistente, falta de ar e dor abdominal forte merecem avaliacao clinica rapida.",
+    "source": "guideline_simulada_saude_mulher_v1",
+    "risk_level": "alto",
+    "category": "womens_health_qa",
+    "specialty": "obstetricia",
+    "keywords": [
+      "pos-parto",
+      "sangramento",
+      "febre",
+      "falta de ar"
+    ],
+    "representativity_tags": [
+      "pos_parto",
+      "prenatal_sus"
+    ]
+  }
+]

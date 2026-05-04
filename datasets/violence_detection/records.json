@@ -1,0 +1,80 @@
+[
+  {
+    "doc_id": "violencia-domestica-01",
+    "title": "Medo do parceiro e controle coercitivo",
+    "text": "Pessoa relata medo do parceiro, controle do celular e isolamento social progressivo.",
+    "risk_score": 0.94,
+    "risk_level": "alto",
+    "requires_intervention": true,
+    "source": "protocolo_simulado_protecao_mulher_v3",
+    "category": "violencia_domestica",
+    "specialty": "protecao_social",
+    "keywords": [
+      "medo do parceiro",
+      "isolamento",
+      "controle do celular"
+    ],
+    "representativity_tags": [
+      "violencia_genero",
+      "rede_protecao"
+    ]
+  },
+  {
+    "doc_id": "violencia-domestica-02",
+    "title": "Lesoes repetidas e explicacoes inconsistentes",
+    "text": "Relato sintetico de lesoes frequentes com justificativas inconsistentes e ansiedade intensa na consulta.",
+    "risk_score": 0.88,
+    "risk_level": "alto",
+    "requires_intervention": true,
+    "source": "protocolo_simulado_protecao_mulher_v3",
+    "category": "violencia_domestica",
+    "specialty": "protecao_social",
+    "keywords": [
+      "lesoes frequentes",
+      "ansiedade",
+      "inconsistencia"
+    ],
+    "representativity_tags": [
+      "violencia_genero",
+      "assistencia_social"
+    ]
+  },
+  {
+    "doc_id": "violencia-domestica-03",
+    "title": "Conflito verbal sem sinal claro de coercao",
+    "text": "Pessoa descreve conflito verbal com parceiro, sem relatar ameacas, lesoes ou vigilancia constante.",
+    "risk_score": 0.32,
+    "risk_level": "moderado",
+    "requires_intervention": false,
+    "source": "protocolo_simulado_protecao_mulher_v3",
+    "category": "violencia_domestica",
+    "specialty": "protecao_social",
+    "keywords": [
+      "conflito verbal",
+      "vigilancia"
+    ],
+    "representativity_tags": [
+      "acolhimento"
+    ]
+  },
+  {
+    "doc_id": "violencia-domestica-04",
+    "title": "Coercao sexual e ameaca direta",
+    "text": "Relato sintetico de coercao sexual, ameacas e restricao de acesso a dinheiro e transporte.",
+    "risk_score": 0.97,
+    "risk_level": "alto",
+    "requires_intervention": true,
+    "source": "protocolo_simulado_protecao_mulher_v3",
+    "category": "violencia_domestica",
+    "specialty": "protecao_social",
+    "keywords": [
+      "coercao sexual",
+      "ameacas",
+      "controle financeiro"
+    ],
+    "representativity_tags": [
+      "violencia_genero",
+      "rede_protecao"
+    ]
+  }
+]

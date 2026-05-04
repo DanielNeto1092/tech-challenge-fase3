@@ -5,6 +5,7 @@ from langgraph.graph import END, START, StateGraph
 from app.domain.models import FlowResult, PreventionInput
 from app.graphs.state import FlowState
 from app.security.audit import AuditLogger
+from app.services.protocol_context_service import ProtocolContextService
 
 
 def _identify_gaps(state: FlowState) -> FlowState:
@@ -12,6 +13,13 @@ def _identify_gaps(state: FlowState) -> FlowState:
     exams = []
     history_blob = " ".join(payload.historico).lower()
     previous_exams = " ".join(payload.exames_realizados).lower()
+    query = " ".join(payload.historico + payload.exames_realizados + [payload.contexto, str(payload.idade)])
+    service = ProtocolContextService.build()
+    protocols = service.find_relevant(
+        query,
+        specialties={"mastologia_preventiva", "mastologia", "ginecologia", "saude_da_mulher"},
+        categories={"prevencao", "breast_cancer", "womens_health_qa"},
+    )
 
     if payload.idade >= 25 and "papanicolau" not in previous_exams:
         exams.append("Atualizar rastreamento de colo do útero conforme diretriz local")
@@ -24,6 +32,7 @@ def _identify_gaps(state: FlowState) -> FlowState:
         **state,
         "suggested_exams": exams,
         "risk_level": "low",
+        "protocol_contexts": service.summarize_sources(protocols),
     }
 
 
@@ -39,7 +48,7 @@ def _build_prevention_guidance(state: FlowState) -> FlowState:
         "recommended_actions": actions,
         "summary": "Fluxo preventivo identificou oportunidades de rastreamento e organização do cuidado.",
         "escalation": "Sugerir agendamento preventivo com atenção primária ou ginecologia.",
-        "notes": ["Rastreamento deve seguir diretrizes institucionais e avaliação individual."],
+        "notes": ["Rastreamento deve seguir diretrizes institucionais e avaliação individual."] + state.get("protocol_contexts", []),
     }
 
 
