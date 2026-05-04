@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260">
+  <defs>
+    <style>
+      .title { font: 700 28px 'Arial', sans-serif; fill: #2f5a32; }
+      .label { font: 600 18px 'Arial', sans-serif; fill: #2f5a32; }
+      .box { fill: #f3fbf1; stroke: #3a7d44; stroke-width: 3; rx: 18; ry: 18; }
+      .arrow { stroke: #3a7d44; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .bg { fill: #edf7ec; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3a7d44" />
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="260" rx="24" ry="24"/>
+  <text class="title" x="40" y="46">Fluxo de Prevenção</text>
+
+  <rect class="box" x="30" y="95" width="170" height="92" rx="18" ry="18"/>
+  <text class="label" x="115" y="132" text-anchor="middle">Histórico</text>
+  <text class="label" x="115" y="158" text-anchor="middle">da paciente</text>
+
+  <rect class="box" x="230" y="95" width="180" height="92" rx="18" ry="18"/>
+  <text class="label" x="320" y="125" text-anchor="middle">Identificação de</text>
+  <text class="label" x="320" y="151" text-anchor="middle">exames</text>
+  <text class="label" x="320" y="177" text-anchor="middle">pendentes</text>
+
+  <rect class="box" x="440" y="95" width="170" height="92" rx="18" ry="18"/>
+  <text class="label" x="525" y="132" text-anchor="middle">Orientações</text>
+  <text class="label" x="525" y="158" text-anchor="middle">preventivas</text>
+
+  <rect class="box" x="640" y="95" width="170" height="92" rx="18" ry="18"/>
+  <text class="label" x="725" y="132" text-anchor="middle">Agendamento</text>
+  <text class="label" x="725" y="158" text-anchor="middle">sugerido</text>
+
+  <rect class="box" x="840" y="95" width="170" height="92" rx="18" ry="18"/>
+  <text class="label" x="925" y="132" text-anchor="middle">Lembretes</text>
+  <text class="label" x="925" y="158" text-anchor="middle">personalizados</text>
+
+  <line class="arrow" x1="200" y1="141" x2="230" y2="141"/>
+  <line class="arrow" x1="410" y1="141" x2="440" y2="141"/>
+  <line class="arrow" x1="610" y1="141" x2="640" y2="141"/>
+  <line class="arrow" x1="810" y1="141" x2="840" y2="141"/>
+</svg>

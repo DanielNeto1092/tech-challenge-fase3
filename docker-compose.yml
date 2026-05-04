@@ -9,3 +9,17 @@ services:
       - ./data:/app/data
     environment:
       PYTHONUNBUFFERED: "1"
+
+  womens-health-streamlit:
+    build: .
+    container_name: tech-challenge-fase3-streamlit
+    command: streamlit run streamlit_app.py --server.address 0.0.0.0 --server.port 8501
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+    environment:
+      PYTHONUNBUFFERED: "1"
+    depends_on:
+      - womens-health-assistant

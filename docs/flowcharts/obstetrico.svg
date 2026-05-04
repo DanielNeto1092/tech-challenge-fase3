@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260">
+  <defs>
+    <style>
+      .title { font: 700 28px 'Arial', sans-serif; fill: #27435d; }
+      .label { font: 600 18px 'Arial', sans-serif; fill: #27435d; }
+      .box { fill: #f3f8fc; stroke: #2b6c8a; stroke-width: 3; rx: 18; ry: 18; }
+      .arrow { stroke: #2b6c8a; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .bg { fill: #eaf4fb; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2b6c8a" />
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="260" rx="24" ry="24"/>
+  <text class="title" x="40" y="46">Fluxo Obstétrico</text>
+
+  <rect class="box" x="30" y="95" width="160" height="92" rx="18" ry="18"/>
+  <text class="label" x="110" y="132" text-anchor="middle">Dados</text>
+  <text class="label" x="110" y="158" text-anchor="middle">da gestante</text>
+
+  <rect class="box" x="220" y="95" width="170" height="92" rx="18" ry="18"/>
+  <text class="label" x="305" y="125" text-anchor="middle">Avaliação de</text>
+  <text class="label" x="305" y="151" text-anchor="middle">risco</text>
+  <text class="label" x="305" y="177" text-anchor="middle">gestacional</text>
+
+  <rect class="box" x="420" y="95" width="160" height="92" rx="18" ry="18"/>
+  <text class="label" x="500" y="132" text-anchor="middle">Orientações</text>
+  <text class="label" x="500" y="158" text-anchor="middle">gerais</text>
+
+  <rect class="box" x="610" y="95" width="170" height="92" rx="18" ry="18"/>
+  <text class="label" x="695" y="132" text-anchor="middle">Sugestão</text>
+  <text class="label" x="695" y="158" text-anchor="middle">de exames</text>
+
+  <rect class="box" x="810" y="95" width="170" height="92" rx="18" ry="18"/>
+  <text class="label" x="895" y="132" text-anchor="middle">Alertas</text>
+  <text class="label" x="895" y="158" text-anchor="middle">de urgência</text>
+
+  <rect class="box" x="1010" y="95" width="160" height="92" rx="18" ry="18"/>
+  <text class="label" x="1090" y="125" text-anchor="middle">Acompanhamento</text>
+  <text class="label" x="1090" y="151" text-anchor="middle">contínuo</text>
+
+  <line class="arrow" x1="190" y1="141" x2="220" y2="141"/>
+  <line class="arrow" x1="390" y1="141" x2="420" y2="141"/>
+  <line class="arrow" x1="580" y1="141" x2="610" y2="141"/>
+  <line class="arrow" x1="780" y1="141" x2="810" y2="141"/>
+  <line class="arrow" x1="980" y1="141" x2="1010" y2="141"/>
+</svg>

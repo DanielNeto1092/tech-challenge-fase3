@@ -46,6 +46,15 @@ def healthcheck() -> dict[str, str]:
     return {"status": "ok"}
 
 
+@app.get("/")
+def root() -> dict[str, str]:
+    return {
+        "message": "Assistente Virtual Medico - Saude e Seguranca da Mulher",
+        "docs": "/docs",
+        "health": "/health",
+    }
+
+
 @app.post("/assist", response_model=AssistantResponse)
 def assist(request: AssistantRequest) -> AssistantResponse:
     return assistant.answer(request)

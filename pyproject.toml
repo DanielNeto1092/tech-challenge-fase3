@@ -20,6 +20,7 @@ dependencies = [
   "langchain-community>=0.3.0",
   "langgraph>=0.2.0",
   "faiss-cpu>=1.8.0",
+  "streamlit>=1.44.0",
   "pytest>=8.3.0",
 ]
 

@@ -90,13 +90,19 @@ Ou com Docker:
 docker compose up --build
 ```
 
-5. Rodar demonstrações:
+5. Executar a interface visual com Streamlit:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+6. Rodar demonstrações:
 
 ```bash
 python examples/run_demos.py
 ```
 
-6. Rodar testes:
+7. Rodar testes:
 
 ```bash
 pytest
@@ -197,6 +203,20 @@ flowchart TD
 - `POST /fluxo/violencia-domestica`
 - `POST /fluxo/obstetrico`
 - `POST /fluxo/prevencao`
+
+## Interface Visual
+
+O projeto inclui uma interface em Streamlit com:
+
+- pergunta clínica contextualizada;
+- abas para os quatro fluxos LangGraph;
+- visualização de risco, confiança, fonte e limites;
+- navegação pelos protocolos sintéticos;
+- painel de auditoria agregada por especialidade.
+
+Arquivo principal:
+
+- `streamlit_app.py`
 
 ## Fine-Tuning ou Simulação
 
