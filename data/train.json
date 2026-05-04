@@ -1,0 +1,169 @@
+[
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Laudo sint\u00e9tico de mamografia com necessidade de correla\u00e7\u00e3o cl\u00ednica",
+    "input": "laudos de mamografia devem ser interpretados em conjunto com exame cl\u00ednico, hist\u00f3rico pessoal e familiar e categoria descritiva padronizada. achados suspeitos, n\u00f3dulo palp\u00e1vel discordante ou retra\u00e7\u00e3o cut\u00e2nea exigem avalia\u00e7\u00e3o especializada presencial.",
+    "output": {
+      "summary": "Laudos de mamografia devem ser interpretados em conjunto com exame cl\u00ednico, hist\u00f3rico pessoal e familiar e categoria descritiva padronizada. Achados suspeitos, n\u00f3dulo palp\u00e1vel discordante ou retra\u00e7\u00e3o cut\u00e2nea exigem avalia\u00e7\u00e3o especializada presencial.",
+      "source": "Cole\u00e7\u00e3o Sint\u00e9tica de Laudos de Imagem v1",
+      "category": "documentos_especializados",
+      "specialty": "mastologia"
+    },
+    "metadata": {
+      "doc_id": "laudo-mamografia-01",
+      "document_type": "laudo_mamografia",
+      "representativity_tags": [
+        "rastreio_populacional",
+        "equidade_acesso"
+      ]
+    }
+  },
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Base sint\u00e9tica de seguran\u00e7a medicamentosa em sa\u00fade da mulher",
+    "input": "a base medicamentosa serve apenas para lembrar intera\u00e7\u00f5es, contraindica\u00e7\u00f5es e necessidade de valida\u00e7\u00e3o especializada em gesta\u00e7\u00e3o, lacta\u00e7\u00e3o, trombose e comorbidades. o assistente n\u00e3o define dose, prescri\u00e7\u00e3o nem substitui avalia\u00e7\u00e3o farmacol\u00f3gica ou m\u00e9dica.",
+    "output": {
+      "summary": "A base medicamentosa serve apenas para lembrar intera\u00e7\u00f5es, contraindica\u00e7\u00f5es e necessidade de valida\u00e7\u00e3o especializada em gesta\u00e7\u00e3o, lacta\u00e7\u00e3o, trombose e comorbidades. O assistente n\u00e3o define dose, prescri\u00e7\u00e3o nem substitui avalia\u00e7\u00e3o farmacol\u00f3gica ou m\u00e9dica.",
+      "source": "Base Sint\u00e9tica de Seguran\u00e7a Medicamentosa v1",
+      "category": "medicamentos",
+      "specialty": "farmacia_clinica"
+    },
+    "metadata": {
+      "doc_id": "base-medicamentos-01",
+      "document_type": "base_medicamentos",
+      "representativity_tags": [
+        "seguranca_paciente",
+        "farmacia_clinica"
+      ]
+    }
+  },
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Sinais de poss\u00edvel viol\u00eancia dom\u00e9stica",
+    "input": "les\u00f5es frequentes, medo do parceiro, controle financeiro, isolamento, coer\u00e7\u00e3o sexual e vigil\u00e2ncia constante s\u00e3o sinais relevantes. em risco imediato, a prioridade \u00e9 seguran\u00e7a f\u00edsica, contato com rede especializada e plano seguro de sa\u00edda, sem expor a v\u00edtima a maior perigo.",
+    "output": {
+      "summary": "Les\u00f5es frequentes, medo do parceiro, controle financeiro, isolamento, coer\u00e7\u00e3o sexual e vigil\u00e2ncia constante s\u00e3o sinais relevantes. Em risco imediato, a prioridade \u00e9 seguran\u00e7a f\u00edsica, contato com rede especializada e plano seguro de sa\u00edda, sem expor a v\u00edtima a maior perigo.",
+      "source": "Protocolo Sint\u00e9tico de Prote\u00e7\u00e3o \u00e0 Mulher v3",
+      "category": "violencia_domestica",
+      "specialty": "protecao_social"
+    },
+    "metadata": {
+      "doc_id": "violencia-domestica-01",
+      "document_type": "protocolo",
+      "representativity_tags": [
+        "violencia_genero",
+        "assistencia_social",
+        "rede_protecao"
+      ]
+    }
+  },
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Sa\u00fade mental materna",
+    "input": "tristeza persistente, culpa intensa, ins\u00f4nia relevante, desesperan\u00e7a ou dificuldade de v\u00ednculo no pos-parto merecem acolhimento e avalia\u00e7\u00e3o profissional. ideias de autoagress\u00e3o ou de ferir o beb\u00ea configuram urg\u00eancia psiqui\u00e1trica.",
+    "output": {
+      "summary": "Tristeza persistente, culpa intensa, ins\u00f4nia relevante, desesperan\u00e7a ou dificuldade de v\u00ednculo no p\u00f3s-parto merecem acolhimento e avalia\u00e7\u00e3o profissional. Ideias de autoagress\u00e3o ou de ferir o beb\u00ea configuram urg\u00eancia psiqui\u00e1trica.",
+      "source": "Fluxo Sint\u00e9tico de Sa\u00fade Mental Materna v1",
+      "category": "saude_mental",
+      "specialty": "saude_mental"
+    },
+    "metadata": {
+      "doc_id": "saude-mental-01",
+      "document_type": "protocolo",
+      "representativity_tags": [
+        "pos_parto",
+        "psicologia",
+        "psiquiatria"
+      ]
+    }
+  },
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Ciclo menstrual e dist\u00farbios hormonais",
+    "input": "irregularidade menstrual, amenorreia, sangramento uterino anormal e sinais de hiperandrogenismo exigem contextualiza\u00e7\u00e3o por idade, gesta\u00e7\u00e3o poss\u00edvel, uso de contraceptivos e comorbidades. sangramento intenso, s\u00edncope ou anemia suspeita demandam avalia\u00e7\u00e3o presencial priorit\u00e1ria.",
+    "output": {
+      "summary": "Irregularidade menstrual, amenorreia, sangramento uterino anormal e sinais de hiperandrogenismo exigem contextualiza\u00e7\u00e3o por idade, gesta\u00e7\u00e3o poss\u00edvel, uso de contraceptivos e comorbidades. Sangramento intenso, s\u00edncope ou anemia suspeita demandam avalia\u00e7\u00e3o presencial priorit\u00e1ria.",
+      "source": "FAQ Sint\u00e9tico de Sa\u00fade Reprodutiva v1",
+      "category": "saude_reprodutiva",
+      "specialty": "endocrinologia_ginecologica"
+    },
+    "metadata": {
+      "doc_id": "ciclo-hormonal-01",
+      "document_type": "faq",
+      "representativity_tags": [
+        "adolescentes",
+        "vida_reprodutiva",
+        "equidade"
+      ]
+    }
+  },
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Protocolo sint\u00e9tico de pr\u00e9-natal e estratifica\u00e7\u00e3o de risco",
+    "input": "o acompanhamento pr\u00e9-natal deve considerar idade gestacional, comorbidades, exames obrigat\u00f3rios, vacina\u00e7\u00e3o e sinais de alarme. hipertens\u00e3o, diabetes gestacional, sangramento, redu\u00e7\u00e3o de movimentos fetais ou cefaleia intensa elevam a prioridade de avalia\u00e7\u00e3o.",
+    "output": {
+      "summary": "O acompanhamento pr\u00e9-natal deve considerar idade gestacional, comorbidades, exames obrigat\u00f3rios, vacina\u00e7\u00e3o e sinais de alarme. Hipertens\u00e3o, diabetes gestacional, sangramento, redu\u00e7\u00e3o de movimentos fetais ou cefaleia intensa elevam a prioridade de avalia\u00e7\u00e3o.",
+      "source": "Protocolo Sint\u00e9tico de Pr\u00e9-Natal Integrado v2",
+      "category": "documentos_especializados",
+      "specialty": "obstetricia"
+    },
+    "metadata": {
+      "doc_id": "protocolo-prenatal-01",
+      "document_type": "protocolo_prenatal",
+      "representativity_tags": [
+        "sus",
+        "alto_risco",
+        "continuidade_cuidado"
+      ]
+    }
+  },
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Triagem de c\u00e2ncer de mama e colo do \u00fatero",
+    "input": "a preven\u00e7\u00e3o inclui rastreamento conforme faixa et\u00e1ria, hist\u00f3rico e diretrizes locais. resultados alterados, n\u00f3dulo palp\u00e1vel, retra\u00e7\u00e3o cut\u00e2nea ou sangramento p\u00f3s-coito exigem avalia\u00e7\u00e3o presencial. o assistente apenas apoia organiza\u00e7\u00e3o e orienta\u00e7\u00e3o preventiva.",
+    "output": {
+      "summary": "A preven\u00e7\u00e3o inclui rastreamento conforme faixa et\u00e1ria, hist\u00f3rico e diretrizes locais. Resultados alterados, n\u00f3dulo palp\u00e1vel, retra\u00e7\u00e3o cut\u00e2nea ou sangramento p\u00f3s-coito exigem avalia\u00e7\u00e3o presencial. O assistente apenas apoia organiza\u00e7\u00e3o e orienta\u00e7\u00e3o preventiva.",
+      "source": "Protocolo Sint\u00e9tico de Preven\u00e7\u00e3o e Rastreio v2",
+      "category": "prevencao",
+      "specialty": "mastologia_preventiva"
+    },
+    "metadata": {
+      "doc_id": "rastreio-cancer-01",
+      "document_type": "protocolo",
+      "representativity_tags": [
+        "atencao_primaria",
+        "saude_publica"
+      ]
+    }
+  },
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Sinais de alerta na gravidez e p\u00f3s-parto",
+    "input": "sangramento vaginal, perda de l\u00edquido, cefaleia intensa com altera\u00e7\u00e3o visual, falta de ar, dor abdominal forte, diminui\u00e7\u00e3o de movimentos fetais, febre e convuls\u00f5es exigem atendimento imediato. no pos-parto, sangramento excessivo, febre, dor mam\u00e1ria intensa ou tristeza persistente tamb\u00e9m merecem avalia\u00e7\u00e3o r\u00e1pida.",
+    "output": {
+      "summary": "Sangramento vaginal, perda de l\u00edquido, cefaleia intensa com altera\u00e7\u00e3o visual, falta de ar, dor abdominal forte, diminui\u00e7\u00e3o de movimentos fetais, febre e convuls\u00f5es exigem atendimento imediato. No p\u00f3s-parto, sangramento excessivo, febre, dor mam\u00e1ria intensa ou tristeza persistente tamb\u00e9m merecem avalia\u00e7\u00e3o r\u00e1pida.",
+      "source": "Protocolo Obst\u00e9trico Sint\u00e9tico v3",
+      "category": "obstetricia",
+      "specialty": "obstetricia"
+    },
+    "metadata": {
+      "doc_id": "gestacao-alerta-01",
+      "document_type": "protocolo",
+      "representativity_tags": [
+        "prenatal_sus",
+        "zona_rural",
+        "alto_risco"
+      ]
+    }
+  },
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Laudo sint\u00e9tico de ultrassom p\u00e9lvico",
+    "input": "achados ultrassonogr\u00e1ficos devem ser correlacionados com sintomas, exame f\u00edsico e idade reprodutiva. dor intensa, massa anexial com repercuss\u00e3o cl\u00ednica ou sangramento anormal requerem revisao presencial por ginecologia.",
+    "output": {
+      "summary": "Achados ultrassonogr\u00e1ficos devem ser correlacionados com sintomas, exame f\u00edsico e idade reprodutiva. Dor intensa, massa anexial com repercuss\u00e3o cl\u00ednica ou sangramento anormal requerem revis\u00e3o presencial por ginecologia.",
+      "source": "Cole\u00e7\u00e3o Sint\u00e9tica de Laudos P\u00e9lvicos v1",
+      "category": "documentos_especializados",
+      "specialty": "ginecologia"
+    },
+    "metadata": {
+      "doc_id": "ultrassom-pelvico-01",
+      "document_type": "laudo_ultrassom",
+      "representativity_tags": [
+        "atencao_secundaria",
+        "imagem_diagnostica"
+      ]
+    }
+  }
+]

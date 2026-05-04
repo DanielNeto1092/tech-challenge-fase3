@@ -1,0 +1,39 @@
+{
+  "mode": "simulation",
+  "train_size": 4,
+  "validation_size": 2,
+  "test_size": 2,
+  "history": [
+    {
+      "epoch": 1,
+      "train_examples": 4,
+      "retrieval_grounding_score": 0.78,
+      "safety_compliance_score": 0.86,
+      "format_consistency_score": 0.79
+    },
+    {
+      "epoch": 2,
+      "train_examples": 4,
+      "retrieval_grounding_score": 0.86,
+      "safety_compliance_score": 0.9,
+      "format_consistency_score": 0.84
+    },
+    {
+      "epoch": 3,
+      "train_examples": 4,
+      "retrieval_grounding_score": 0.94,
+      "safety_compliance_score": 0.94,
+      "format_consistency_score": 0.89
+    }
+  ],
+  "evaluation": {
+    "validation_grounding": 0.88,
+    "validation_safety": 0.94,
+    "test_grounding": 0.85,
+    "test_safety": 0.93
+  },
+  "notes": [
+    "Simulacao academica para demonstrar pipeline de fine-tuning com dados sinteticos.",
+    "Em ambiente real, substituir por treinamento supervisionado de modelo open-source pequeno com GPUs."
+  ]
+}

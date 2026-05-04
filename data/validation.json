@@ -1,0 +1,56 @@
+[
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Orienta\u00e7\u00f5es iniciais sobre amamenta\u00e7\u00e3o",
+    "input": "pega correta, livre demanda e observa\u00e7\u00e3o de fissuras, dor importante ou febre s\u00e3o pontos centrais. mastite suspeita ou dificuldade persistente de pega exigem avalia\u00e7\u00e3o por equipe de enfermagem, banco de leite ou profissional habilitado.",
+    "output": {
+      "summary": "Pega correta, livre demanda e observa\u00e7\u00e3o de fissuras, dor importante ou febre s\u00e3o pontos centrais. Mastite suspeita ou dificuldade persistente de pega exigem avalia\u00e7\u00e3o por equipe de enfermagem, banco de leite ou profissional habilitado.",
+      "source": "Guia Sint\u00e9tico de Aleitamento Materno v1",
+      "category": "amamentacao",
+      "specialty": "neonatologia"
+    },
+    "metadata": {
+      "doc_id": "amamentacao-01",
+      "document_type": "faq",
+      "representativity_tags": [
+        "pos_parto",
+        "atencao_primaria"
+      ]
+    }
+  },
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Menopausa e climat\u00e9rio",
+    "input": "ondas de calor, altera\u00e7\u00f5es do sono, ressecamento vaginal e mudan\u00e7as de humor podem ocorrer no climat\u00e9rio. sangramento uterino ap\u00f3s menopausa \u00e9 sinal de alerta e requer investiga\u00e7\u00e3o m\u00e9dica presencial.",
+    "output": {
+      "summary": "Ondas de calor, altera\u00e7\u00f5es do sono, ressecamento vaginal e mudan\u00e7as de humor podem ocorrer no climat\u00e9rio. Sangramento uterino ap\u00f3s menopausa \u00e9 sinal de alerta e requer investiga\u00e7\u00e3o m\u00e9dica presencial.",
+      "source": "Manual Sint\u00e9tico de Sa\u00fade da Mulher Adulta v1",
+      "category": "menopausa",
+      "specialty": "ginecologia"
+    },
+    "metadata": {
+      "doc_id": "menopausa-01",
+      "document_type": "faq",
+      "representativity_tags": [
+        "meia_idade",
+        "climaterio"
+      ]
+    }
+  },
+  {
+    "instruction": "Explique com seguran\u00e7a o tema: Relat\u00f3rio sint\u00e9tico de viol\u00eancia dom\u00e9stica com documenta\u00e7\u00e3o segura",
+    "input": "registros de viol\u00eancia devem priorizar seguran\u00e7a, linguagem objetiva, cadeia m\u00ednima de acesso e documenta\u00e7\u00e3o sem revitimiza\u00e7\u00e3o. risco iminente, amea\u00e7a letal ou coer\u00e7\u00e3o cont\u00ednua exigem acionamento imediato da rede especializada.",
+    "output": {
+      "summary": "Registros de viol\u00eancia devem priorizar seguran\u00e7a, linguagem objetiva, cadeia m\u00ednima de acesso e documenta\u00e7\u00e3o sem revitimiza\u00e7\u00e3o. Risco iminente, amea\u00e7a letal ou coer\u00e7\u00e3o cont\u00ednua exigem acionamento imediato da rede especializada.",
+      "source": "Modelo Sint\u00e9tico de Relat\u00f3rio Protegido v1",
+      "category": "documentos_especializados",
+      "specialty": "assistencia_social"
+    },
+    "metadata": {
+      "doc_id": "relatorio-violencia-01",
+      "document_type": "relatorio_violencia",
+      "representativity_tags": [
+        "rede_protecao",
+        "sigilo_qualificado"
+      ]
+    }
+  }
+]

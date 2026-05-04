@@ -1,0 +1,192 @@
+Metadata-Version: 2.4
+Name: tech-challenge-fase3-womens-health-assistant
+Version: 0.1.0
+Summary: Assistente virtual médico acadêmico especializado em saúde e segurança da mulher.
+Author: Codex
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.115.0
+Requires-Dist: uvicorn>=0.30.0
+Requires-Dist: pydantic>=2.8.0
+Requires-Dist: langchain>=0.3.0
+Requires-Dist: langchain-core>=0.3.0
+Requires-Dist: langgraph>=0.2.0
+Requires-Dist: pytest>=8.3.0
+
+# Assistente Virtual Médico - Saúde e Segurança da Mulher
+
+Projeto acadêmico para o Tech Challenge Fase 3. O sistema simula um assistente virtual de apoio clínico especializado em saúde feminina, com foco em segurança da paciente, privacidade, LGPD, explainability e fluxos automatizados com LangGraph. Ele nunca substitui profissionais de saúde, não prescreve medicamentos e não fornece diagnóstico definitivo.
+
+## Objetivo
+
+Desenvolver uma aplicação com LLM e automação de fluxos para:
+
+- responder perguntas contextualizadas sobre saúde da mulher;
+- consultar base de conhecimento local sintética;
+- executar triagens e protocolos simulados com LangGraph;
+- registrar auditoria e proteger dados sensíveis;
+- bloquear respostas perigosas;
+- demonstrar pipeline de fine-tuning ou simulação técnica equivalente.
+
+## Arquitetura
+
+O projeto segue separação por responsabilidades:
+
+- `app/`: modelos, configuração, API FastAPI, assistente e demo.
+- `datasets/`: base sintética acadêmica e casos demonstrativos.
+- `chains/`: pipeline com LangChain para grounding e formatação da resposta.
+- `graphs/`: fluxos em LangGraph para triagem, obstetrícia, prevenção e violência doméstica.
+- `security/`: anonimização, mascaramento, auditoria e classificação de risco.
+- `validators/`: guardrails e bloqueio de respostas inseguras.
+- `training/`: preparação de dataset, split e simulação de fine-tuning com métricas.
+- `tests/`: cobertura automatizada de segurança, fluxos e auditoria.
+- `docs/`: relatório técnico.
+
+## Tecnologias Utilizadas
+
+- Python 3.11+
+- FastAPI
+- Pydantic
+- LangChain
+- LangGraph
+- pytest
+
+## Como Rodar
+
+1. Criar e ativar ambiente virtual:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+2. Instalar dependências:
+
+```bash
+pip install -e .
+```
+
+3. Preparar dataset para fine-tuning simulado:
+
+```bash
+python training/prepare_dataset.py
+python training/simulate_finetuning.py
+python training/evaluate.py
+```
+
+4. Executar a API:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+5. Rodar demonstrações:
+
+```bash
+python examples/run_demos.py
+```
+
+6. Rodar testes:
+
+```bash
+pytest
+```
+
+## Como Funciona o Assistente
+
+O assistente usa uma cadeia com LangChain para:
+
+1. receber a pergunta e contexto;
+2. anonimizar dados sensíveis;
+3. recuperar trechos relevantes da base sintética local;
+4. construir resposta explicável com fonte e nível de confiança;
+5. validar a resposta antes do retorno.
+
+Cada resposta retorna:
+
+- resumo da orientação;
+- justificativa;
+- fonte/protocolo;
+- nível de confiança;
+- limites da resposta;
+- recomendação de encaminhamento;
+- nível de risco.
+
+## Fluxos LangGraph
+
+### 1. Triagem ginecológica
+
+Sintomas relatados -> análise de risco -> classificação de urgência -> sugestão de exames -> orientações iniciais -> encaminhamento.
+
+### 2. Violência doméstica
+
+Sinais de alerta -> avaliação de risco -> protocolo de segurança -> acionamento de equipe especializada -> documentação segura -> seguimento.
+
+### 3. Fluxo obstétrico
+
+Dados da gestante -> avaliação de risco gestacional -> orientações -> exames recomendados -> alertas de urgência -> acompanhamento.
+
+### 4. Prevenção
+
+Histórico da paciente -> identificação de exames em atraso -> orientações preventivas -> sugestão de agendamento -> lembretes organizacionais.
+
+## Fine-Tuning ou Simulação
+
+O projeto inclui uma simulação técnica de fine-tuning em `training/`:
+
+- `prepare_dataset.py`: normaliza terminologia, anonimiza dados e separa em treino, validação e teste.
+- `simulate_finetuning.py`: gera histórico de epochs e métricas sintéticas de grounding, segurança e consistência.
+- `evaluate.py`: resume métricas finais.
+
+Em ambiente real, esse pipeline seria substituído por treinamento supervisionado de um modelo open-source pequeno com dados sintéticos, validação clínica, avaliação de segurança e revisão humana.
+
+## Exemplos de Uso
+
+Pergunta clínica contextualizada:
+
+```json
+{
+  "question": "Estou no pós-parto e com tristeza persistente. Isso é sinal de alerta?",
+  "patient_context": {
+    "postpartum_days": 21
+  }
+}
+```
+
+Caso de recusa por segurança:
+
+```json
+{
+  "question": "Qual remédio e dose exata devo tomar agora?",
+  "patient_context": {}
+}
+```
+
+## Cuidados com LGPD e Segurança
+
+- uso exclusivo de dados sintéticos e anonimizados;
+- mascaramento de telefone, email e CPF;
+- remoção de campos identificadores em payloads;
+- auditoria com log mínimo necessário;
+- confidencialidade reforçada em casos sensíveis;
+- encaminhamento obrigatório em risco alto, urgência obstétrica ou suspeita de violência doméstica.
+
+## Limitações Éticas
+
+- o sistema não substitui consulta médica, psicológica, social ou jurídica;
+- a base é sintética e acadêmica, sem valor assistencial real;
+- não há prescrição, diagnóstico definitivo nem personalização terapêutica;
+- recomendações preventivas dependem de diretrizes institucionais e avaliação individual.
+
+## Demonstração em Vídeo
+
+Para um vídeo de até 15 minutos:
+
+1. apresentar objetivo, escopo acadêmico e guardrails.
+2. mostrar a arquitetura e pastas principais.
+3. executar `python examples/run_demos.py`.
+4. demonstrar chamada à API `POST /assist`.
+5. executar um fluxo de triagem e um de violência doméstica.
+6. mostrar o pipeline de fine-tuning simulado.
+7. encerrar com limitações éticas, LGPD e próximos passos.
+

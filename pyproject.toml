@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tech-challenge-fase3-womens-health-assistant"
+version = "0.1.0"
+description = "Assistente virtual médico acadêmico especializado em saúde e segurança da mulher."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Codex" }
+]
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn>=0.30.0",
+  "pydantic>=2.8.0",
+  "langchain>=0.3.0",
+  "langchain-core>=0.3.0",
+  "langchain-community>=0.3.0",
+  "langgraph>=0.2.0",
+  "faiss-cpu>=1.8.0",
+  "pytest>=8.3.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

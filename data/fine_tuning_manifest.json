@@ -1,0 +1,74 @@
+{
+  "mode": "academic_simulation",
+  "source_dataset": "synthetic_womens_health_knowledge.json",
+  "records_total": 15,
+  "validation_errors": {},
+  "balance_summary": {
+    "categories": {
+      "contraceptivos": 1,
+      "sintomas_ginecologicos": 1,
+      "obstetricia": 1,
+      "amamentacao": 1,
+      "menopausa": 1,
+      "prevencao": 1,
+      "saude_mental": 1,
+      "violencia_domestica": 1,
+      "documentos_especializados": 5,
+      "medicamentos": 1,
+      "saude_reprodutiva": 1
+    },
+    "specialties": {
+      "planejamento_familiar": 1,
+      "ginecologia": 3,
+      "obstetricia": 2,
+      "neonatologia": 1,
+      "mastologia_preventiva": 1,
+      "saude_mental": 1,
+      "protecao_social": 1,
+      "mastologia": 1,
+      "patologia_cervical": 1,
+      "assistencia_social": 1,
+      "farmacia_clinica": 1,
+      "endocrinologia_ginecologica": 1
+    },
+    "representativity_tags": {
+      "adolescentes": 2,
+      "atencao_primaria": 3,
+      "baixa_renda": 1,
+      "periferia_urbana": 1,
+      "atencao_secundaria": 2,
+      "prenatal_sus": 1,
+      "zona_rural": 1,
+      "alto_risco": 2,
+      "pos_parto": 2,
+      "meia_idade": 1,
+      "climaterio": 1,
+      "saude_publica": 2,
+      "psicologia": 1,
+      "psiquiatria": 1,
+      "violencia_genero": 1,
+      "assistencia_social": 1,
+      "rede_protecao": 2,
+      "rastreio_populacional": 1,
+      "equidade_acesso": 1,
+      "imagem_diagnostica": 1,
+      "rastreio_colo_utero": 1,
+      "sigilo_qualificado": 1,
+      "sus": 1,
+      "continuidade_cuidado": 1,
+      "seguranca_paciente": 1,
+      "farmacia_clinica": 1,
+      "vida_reprodutiva": 1,
+      "equidade": 1
+    }
+  },
+  "specialist_curation": {
+    "status": "simulada",
+    "review_required_roles": [
+      "ginecologia",
+      "obstetricia",
+      "psicologia",
+      "assistencia_social"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "case_id": "demo-clinico-01",
+    "type": "pergunta_clinica",
+    "question": "Estou no pós-parto e sinto muita tristeza e dificuldade para dormir. Isso pode ser preocupante?",
+    "context": {
+      "postpartum_days": 21,
+      "identified_name": "Paciente Exemplo"
+    }
+  },
+  {
+    "case_id": "demo-gineco-01",
+    "type": "triagem_ginecologica",
+    "input": {
+      "sintomas": ["dor pélvica intensa", "febre", "corrimento com odor forte"],
+      "contexto": "Sintomas há 2 dias com piora progressiva",
+      "idade": 29,
+      "gestante": false
+    }
+  },
+  {
+    "case_id": "demo-obstetrico-01",
+    "type": "fluxo_obstetrico",
+    "input": {
+      "idade_gestacional_semanas": 31,
+      "sintomas": ["cefaleia intensa", "visão embaçada", "inchaço súbito"],
+      "comorbidades": ["hipertensão gestacional prévia"],
+      "contexto": "Redução da movimentação fetal desde ontem"
+    }
+  },
+  {
+    "case_id": "demo-prevencao-01",
+    "type": "fluxo_prevencao",
+    "input": {
+      "idade": 47,
+      "historico": ["mãe com câncer de mama após os 50 anos"],
+      "exames_realizados": ["Papanicolau há 4 anos"],
+      "contexto": "Sem queixas atuais"
+    }
+  },
+  {
+    "case_id": "demo-violencia-01",
+    "type": "fluxo_violencia",
+    "input": {
+      "sinais_alerta": ["medo do parceiro", "isolamento social", "lesões frequentes"],
+      "contexto": "Parceiro monitora o celular",
+      "risco_imediato": true
+    }
+  }
+]
+
